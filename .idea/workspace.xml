@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8c3d3719-2b3d-42b1-b111-b9ee79bafb47" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafos/Grafo.java" afterPath="$PROJECT_DIR$/src/Grafos/Grafo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafos/Nodo.java" afterPath="$PROJECT_DIR$/src/Grafos/Nodo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CrazyRiver.iws" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="Grafo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Grafos/Grafo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5117057">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.80701756">
+              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -355,7 +354,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434571333115</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Cambios en el grafo">
+      <created>1434575351834</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1434575351834</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -403,7 +408,8 @@
     <MESSAGE value="Clase Pila agregada" />
     <MESSAGE value="Agregadas las clases BasicEnemyShip, PlayerShip, Bullets y Bridge, a falta de modificaciones para su correcto uso!!!" />
     <MESSAGE value="cambios en el nodo" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios en el nodo" />
+    <MESSAGE value="Cambios en el grafo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en el grafo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -535,8 +541,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grafos/Grafo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5117057">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.80701756">
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
           <folding />
         </state>
       </provider>
