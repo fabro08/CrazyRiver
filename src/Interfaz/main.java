@@ -1,10 +1,19 @@
-package Objetos;
+package Interfaz;
 
 import javax.swing.JFrame;
+import java.io.*;
+import sun.audio.*;
 
  
 public class main extends JFrame{
     public main(){
+    	
+    	/*throw Exception
+    	{
+    		String sonido = "/home/wilson/CrazyRiverRide++/CrazyRiver/src/GOT.wav";
+    		ImputStream in = new FileInputStream(sonido);
+    		AudioStream audio = new AudioStream(in);
+    	}*/
         //TITULO
         setTitle("Crazy River Ride++");
         //CERRAR AL CLICKEAR EN LA CRUZ
@@ -19,8 +28,8 @@ public class main extends JFrame{
         //AGREGAMOS A LA VENTANA UN NUEVO OBJETO QUE ES UNA CLASE LLAMADA TABLERO
         //QUE HEREDA DE LA CLASE JPANEL DE SWING Y QUE ES DONDE SE DIBUJARA
         //NUESTRO JUEGO
-        //add(new Tablero());
-        
+        add(new Tablero());
+         //add(new menu());
         //HACEMOS VISIBLE NUESTRA VENTANA
         setVisible(true);
     }
