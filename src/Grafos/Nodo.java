@@ -29,7 +29,7 @@ public class Nodo {
 	 * @return
 	 */
 	public Object getDato() {
-		return dato;
+		return this.dato;
 	}
 	
 	/**
@@ -45,15 +45,15 @@ public class Nodo {
 	 * @return
 	 */
 	public ArrayList<Nodo> getVecinos() {
-		return vecinos;
+		return this.vecinos;
 	}
 	
 	/**
 	 * 
 	 * @param vecinos
 	 */
-	public void setVecinos(ArrayList<Nodo> vecinos) {
-		this.vecinos = vecinos;
+	public void setVecinos(Nodo vecinosN) {
+		this.vecinos.add(vecinosN);
 	}
 	
 	/**
@@ -61,7 +61,7 @@ public class Nodo {
 	 * @return
 	 */
 	public Boolean getVisitado() {
-		return visitado;
+		return this.visitado;
 	}
 	
 	/**

@@ -10,11 +10,24 @@ public class Pila extends ArrayList {
 	
 	public void agregarNodo(Nodo nodo){
 		if(!this.contains(nodo)&&nodo.visitado!=true){
-			agregar(nodo);
+			add(nodo);
 			mostrarContenido();
 		}
 	}
-	public void obtenerNodo(){
-
+	public Nodo obtenerNodo(){
+		Nodo auxiliar =null;
+		if(!this.isEmpty()&&this!=null){
+			auxiliar=(Nodo)this.get(this.size() -1);
+			this.remove(this.size() -1);
+		}
+		return auxiliar;
+	}
+	
+	public void mostrarContenido(){
+		System.out.println("[");
+		for(int i=0; i< this.size()-1;i++){
+			System.out.print(((Nodo)this.get(i)).getDato());
+		}
+		System.out.println("]");
 	}
 }
