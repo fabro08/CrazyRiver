@@ -5,14 +5,17 @@ public class PlayerShip {
 	public int life;
 	public int fuel;
 	public int bullets;
-	public int Btype; //Esta variable es saber si tiene un tipo especial de bala True y False bala Normal
+	public int Btype; //Esta variable es para saber que tipo de bala tiene
+	public int posX;
+	public int posY;
 	
 	public PlayerShip (int vida,int combustible,int balas,int typo){
 		this.life= vida;
 		this.fuel=combustible;
 		this.bullets = balas;
 		this.Btype = typo;
-		
+		this.posX = 600;
+		this.posY = 600;
 	}
 	
 	/*********
@@ -32,6 +35,15 @@ public class PlayerShip {
 	public int getBtype(){
 		return Btype;	
 	}
+	
+	public int getPosX() {
+		return posX;
+	}
+
+	public int getPosY() {
+		return posY;
+	}
+
 	/*********
 	 * 
 	 * Setters del objeto nave
@@ -48,6 +60,14 @@ public class PlayerShip {
 	}
 	public void setBulleType(int tipoB){
 		this.Btype=tipoB;
+	}
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+	public void setPosY(int posY) {
+		this.posY = posY;
 	}
 	
 }

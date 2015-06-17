@@ -6,12 +6,12 @@ public class Bullets {
 	public int type;
 	
 	
-public Bullets(int y,int x,int tipo){
-	this.Xpos=y;
-	this.Ypos=x;
-	this.type=tipo;
-	
-}
+	public Bullets(int y,int x,int tipo){
+		this.Xpos=y;
+		this.Ypos=x;
+		this.type=tipo;
+		
+	}
 	
 	public int getYpos() {
 		return Ypos;
