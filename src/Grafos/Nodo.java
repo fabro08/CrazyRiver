@@ -12,7 +12,6 @@ import java.util.ArrayList;
 public class Nodo {
 	
 	public Object dato;
-	public ArrayList<Nodo> vecinos;
 	public Boolean visitado = false;
 	
 	/**
@@ -21,7 +20,6 @@ public class Nodo {
 	 */
 	public Nodo(Object datoN){
 		this.dato=datoN;
-		vecinos=new ArrayList<Nodo>();
 	}
 	
 	/**
@@ -38,22 +36,6 @@ public class Nodo {
 	 */
 	public void setDato(Object dato) {
 		this.dato = dato;
-	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public ArrayList<Nodo> getVecinos() {
-		return this.vecinos;
-	}
-	
-	/**
-	 * 
-	 * @param vecinos
-	 */
-	public void setVecinos(Nodo vecinosN) {
-		this.vecinos.add(vecinosN);
 	}
 	
 	/**
