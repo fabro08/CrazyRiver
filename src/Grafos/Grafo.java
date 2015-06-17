@@ -2,17 +2,25 @@ package Grafos;
 
 import java.util.ArrayList;
 
+
 public class Grafo {
-	public ArrayList<Nodo> listaNodo;
+	private final int NODOSMAXIMOS=20;
+	public Nodo listaNodos[];
+	public int matrizAdyacencia[][];
+	public int cantidad;
 	
 	public Grafo(){
-		listaNodo=new ArrayList<Nodo>();
+		listaNodos= new nodo[NODOSMAXIMOS];
+		matrizAdyacencia=new int[NODOSMAXIMOS][NODOSMAXIMOS];
+        cantidad=0;
+        for (int i = 0; i < NODOSMAXIMOS; i++) {
+            for (int j = 0; j <NODOSMAXIMOS ; j++) {
+                matrizAdyacencia[i][j]=0;
+            }
+        }
+
 	}
-	
-	public void adjuntarNodo(Nodo nodo){
-		listaNodo.add(nodo);
-	}
-	
+
 	public void crearEnlaces(Object nombreNodoPadre, Object nombreNodoHijo){
 		Nodo padre = buscarNodo(nombreNodoPadre);
 		Nodo hijo=buscarNodo(nombreNodoHijo);
