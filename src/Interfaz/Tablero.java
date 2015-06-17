@@ -1,11 +1,13 @@
 package Interfaz;
 
 import java.awt.Color;
+import java.awt.event.ActionListener;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class Tablero extends JPanel implements Runnable{
@@ -15,8 +17,13 @@ public class Tablero extends JPanel implements Runnable{
     private Thread hilo;
     private int x,y;
     private final int DELAY=5;
+    private JButton boton;
     
     public Tablero(){
+    	
+    	boton.setText("Search");
+		boton.setBounds(200, 200, 200, 30);
+		boton.addActionListener((ActionListener) this);
         setBackground(Color.white);
         setDoubleBuffered(true);
  
@@ -48,6 +55,7 @@ public class Tablero extends JPanel implements Runnable{
         g2.drawImage(bart,x+500,y+200, null);
         Toolkit.getDefaultToolkit().sync();
         g.dispose();
+        this.add(boton);
     }
     
     public void ciclo(){
@@ -69,6 +77,8 @@ public class Tablero extends JPanel implements Runnable{
             }
         }
     }
+    
+    
 }
 
 

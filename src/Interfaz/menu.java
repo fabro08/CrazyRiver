@@ -1,42 +1,117 @@
 package Interfaz;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Graphics;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 
-public class menu extends JFrame {
+/*import Sockets.Cliente;
+import Sockets.Server;*/
 
-	private JPanel contentPane;
+/**
+ * Clase utilizada para crear una ventana de cliente
+ * 
+ * @author wilson
+ *
+ */
+public class menu extends JFrame implements ActionListener {
+	// **Atributos*/
+	private JLabel TextoPrincipal;
+	private JTextField entradaTexto;
+	private JButton BotonBuscar;
+	private JButton BotonModificar;
+	String Dirip;
+	int Dirpuerto;
+
+	//Cliente cliente = new Cliente();
 
 	/**
-	 * Launch the application.
+	 * Constructor
+	 * 
+	 * @param ip
+	 *            : Direccion ip utilizada
+	 * @param puerto
+	 *            : Direccion puerto utilizado
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					menu frame = new menu();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+	public menu() {
+		super();
+		Ventana();
+		Componentes();
+
 	}
 
 	/**
-	 * Create the frame.
+	 * Metodo para establecer configuracion inicial
 	 */
-	public menu() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane);
+	private void Ventana() {
+		this.setTitle("​SpiderSearch Engine: Stage 2: Cliente");
+		this.setSize(640, 410);
+		this.setLocationRelativeTo(null);
+		this.setLayout(null);
+		this.setResizable(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// this.getContentPane().setBackground(Color.LIGHT_GRAY);
+	}
+
+	/**
+	 * Metodo para crear los componentes
+	 */
+	private void Componentes() {
+		/** Se crean los componentes */
+		TextoPrincipal = new JLabel();
+		entradaTexto = new JTextField();
+		BotonBuscar = new JButton();
+		BotonModificar = new JButton();
+
+		TextoPrincipal.setText("Inserte el texto a buscar");
+		TextoPrincipal.setBounds(215, 125, 250, 25);
+		entradaTexto.setBounds(180, 160, 250, 25);
+		BotonBuscar.setText("Search");
+		BotonBuscar.setBounds(200, 200, 200, 30);
+		BotonBuscar.addActionListener(this);
+		BotonModificar.setText("Configuración");
+		BotonModificar.setBounds(487, 345, 140, 30);
+		BotonModificar.addActionListener(this);
+
+		this.add(TextoPrincipal);
+		this.add(entradaTexto);
+		this.add(BotonBuscar);
+		this.add(BotonModificar);
+
+	}
+
+	/** Al tocar un botón */
+	public void actionPerformed(ActionEvent boton) {
+
+		/** Si se presiona el boton buscar */
+		if (boton.getSource() == BotonBuscar) {
+			//cliente.IniciarCliente(entradaTexto.getText(), Dirip, Dirpuerto);
+			//VentanaResultados aResultados = new VentanaResultados();
+			//aResultados.setVisible(true);
+//
+		}
+		/** Sino */
+		else {
+			
+			//VentanaConfiguracion aPrincipal = new VentanaConfiguracion();
+			//aPrincipal.setVisible(true);
+
+		}
+		this.hide();
+
 	}
 
 }
