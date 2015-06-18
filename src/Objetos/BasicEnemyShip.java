@@ -20,15 +20,15 @@ public class BasicEnemyShip {
 			life = life-2;
 		}
 		else{
-			life = 0;
-			alive = false;
+			kill();
 		}
 	}
 	
 	/**
-	 * Metodo que cambia la vida de la nave a false, indicando que debe desaparecer
+	 * Metodo que mata la nave
 	 */
 	public void kill(){
+		life = 0;
 		alive = false;		
 	}
 	
@@ -44,6 +44,13 @@ public class BasicEnemyShip {
 	 * Funcion para realizar el disparo
 	 */
 	public void shoot(){
+		
+	}
+	
+	/**
+	 * Metodo que cambia las coordenadas de la nave, ocacionando el movimiento
+	 */
+	public void move(){
 		
 	}
 
@@ -63,11 +70,6 @@ public class BasicEnemyShip {
 		this.posY = posY;
 	}
 	
-	/**
-	 * Funcion que mueve la nave
-	 */
-	public void mover(){
-		
-	}
+	
 
 }

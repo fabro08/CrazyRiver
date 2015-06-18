@@ -15,7 +15,7 @@ public class PersecutorShip {
 	
 	public void removesLife(){
 		if (life == 4){
-			life = life-4;
+			life = life-2;
 		} else {
 			kill();
 		}
@@ -37,7 +37,7 @@ public class PersecutorShip {
 	/**
 	 * Metodo que cambia las coordenadas de la nave, ocacionando el movimiento
 	 */
-	public void mover(){
+	public void move(){
 		
 	}
 
