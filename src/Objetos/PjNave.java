@@ -1,19 +1,59 @@
 package Objetos;
 
+import java.awt.Graphics2D;
+import Interfaz.Game;
+import java.awt.Image;
+import java.awt.Rectangle;
+import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
+
 public class PjNave {
 	
-	public int life;
-	public int fuel;
-	public int bullets;
-	public int Btype; //Esta variable es saber si tiene un tipo especial de bala True y False bala Normal
+	int x = 0;
+	int xa = 0;
+	private Game game;
+	private final int Y = 565;
+	private final int WITH = 70;
+	private final int HEIGHT = 85;
+	public int life= 100;
+	public int fuel=40;
+	public int bullets=40;
+	public int Btype=0;
+	private Image Nave= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/NAVE.png").getImage();;
 	
-	public PjNave (int vida,int combustible,int balas,int typo){
-		this.life= vida;
-		this.fuel=combustible;
-		this.bullets = balas;
-		this.Btype = typo;
+	public PjNave (Game game){
+		this.game = game;
 		
 	}
+	
+	public void move() {
+		if (x + xa > 0 && x + xa < game.getWidth()-60)
+			x = x + xa;
+	}
+	public void paint(Graphics2D g) 
+	{
+		g.drawImage(Nave, x, Y, WITH , HEIGHT, null);
+		//g.fillRect(x,Y ,WITH, HEIGHT);
+	}
+	public void keyReleased(KeyEvent e) {
+		xa = 0;
+	}
+
+	public void keyPressed(KeyEvent e) {
+		if (e.getKeyCode() == KeyEvent.VK_A||e.getKeyCode() == KeyEvent.VK_J)
+			xa = -5;
+		if (e.getKeyCode() == KeyEvent.VK_D||e.getKeyCode() == KeyEvent.VK_L)
+			xa = 5;
+		if (e.getKeyCode() == KeyEvent.VK_SPACE)
+			xa=50;
+	}public Rectangle getBounds() {
+		return new Rectangle(x, Y, WITH, HEIGHT);
+	}
+
+	public int getTopY() {
+		return Y - HEIGHT;
+	}
+
 	
 	/*********
 	 * 
