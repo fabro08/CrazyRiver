@@ -40,7 +40,7 @@ public class MayhemBullets {
 	/**
 	 * Metodo que cambia las coordenadas de la bala, generando el movimiento
 	 */
-	public void mover(){
+	public void move(){
 
 	}
 

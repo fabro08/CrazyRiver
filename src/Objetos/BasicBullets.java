@@ -7,7 +7,6 @@ package Objetos;
  */
 public class BasicBullets {
 	public boolean alive;
-	public int quantity;
 	public int posX;
 	public int posY;
 
@@ -16,11 +15,10 @@ public class BasicBullets {
 	 * @param posX - Parametro que indica la posicion en el eje X en donde
 	 * debe de aparecer la bala
 	 */
-	public BasicBullets(int posX){
+	public BasicBullets(int posX, int posY){
 		this.alive = true;
-		this.quantity = 10;
 		this.posX = posX;
-		this.posY = 0;
+		this.posY = posY;
 	}
 
 	/**
@@ -49,9 +47,6 @@ public class BasicBullets {
 	/******
 	 * Getters de la clase
 	 ******/
-	public int getQuantity() {
-		return quantity;
-	}
 	public int getPosX() {
 		return posX;
 	}
@@ -62,9 +57,6 @@ public class BasicBullets {
 	/******
 	 * Setters de la clase
 	 ******/
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
 	public void setPosX(int posX) {
 		this.posX = posX;
 	}
