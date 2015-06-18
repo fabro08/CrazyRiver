@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c3d3719-2b3d-42b1-b111-b9ee79bafb47" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Grafos/Pila.java" afterPath="$PROJECT_DIR$/src/Grafos/CaminoCorto.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafos/Grafo.java" afterPath="$PROJECT_DIR$/src/Grafos/Grafo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -26,31 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Grafo.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Grafo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Grafos/Grafo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5185184">
-              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CaminoCorto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Grafos/CaminoCorto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1153846">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12040134">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.80701756">
+              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -83,7 +62,6 @@
         <option value="$PROJECT_DIR$/src/Objetos/Bridge.java" />
         <option value="$PROJECT_DIR$/src/Grafos/Nodo.java" />
         <option value="$PROJECT_DIR$/src/Grafos/Grafo.java" />
-        <option value="$PROJECT_DIR$/src/Grafos/CaminoCorto.java" />
       </list>
     </option>
   </component>
@@ -166,24 +144,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Objetos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrazyRiver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrazyRiver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -400,13 +360,7 @@
       <option name="project" value="LOCAL" />
       <updated>1434575351834</updated>
     </task>
-    <task id="LOCAL-00005" summary="Cambios en el grafo (creacion de un grafo dirigido y no dirigido)">
-      <created>1434580841382</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1434580841389</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -455,8 +409,7 @@
     <MESSAGE value="Agregadas las clases BasicEnemyShip, PlayerShip, Bullets y Bridge, a falta de modificaciones para su correcto uso!!!" />
     <MESSAGE value="cambios en el nodo" />
     <MESSAGE value="Cambios en el grafo" />
-    <MESSAGE value="Cambios en el grafo (creacion de un grafo dirigido y no dirigido)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en el grafo (creacion de un grafo dirigido y no dirigido)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en el grafo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -514,6 +467,13 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grafos/Pila.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44701988">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -581,24 +541,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grafos/Grafo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5185184">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grafos/CaminoCorto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1153846">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12040134">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.80701756">
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
           <folding />
         </state>
       </provider>
