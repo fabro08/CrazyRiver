@@ -39,7 +39,7 @@ public class DiffusionBullets {
 	/**
 	 * Metodo que cambia las coordenadas de la bala, generando el movimiento
 	 */
-	public void mover(){
+	public void move(){
 
 	}
 
