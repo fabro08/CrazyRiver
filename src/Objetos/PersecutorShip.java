@@ -40,21 +40,24 @@ public class PersecutorShip {
 	public void move(){
 		
 	}
-
+	
+	/******
+	 * Getters de la clase
+	 ******/
 	public int getPosX() {
 		return posX;
 	}
-
 	public int getPosY() {
 		return posY;
 	}
-
+	
+	/******
+	 * Setters de la clase
+	 ******/
 	public void setPosX(int posX) {
 		this.posX = posX;
 	}
-
 	public void setPosY(int posY) {
 		this.posY = posY;
 	}
-	
 }
