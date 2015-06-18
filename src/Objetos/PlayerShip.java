@@ -1,20 +1,40 @@
 package Objetos;
 
+import java.awt.Graphics2D;
+import Interfaz.Game;
+import java.awt.Image;
+import java.awt.Rectangle;
+import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
+
+import Interfaz.Game;
+
 public class PlayerShip {
 	
-	public int life;
-	public boolean alive;
-	public int fuel;
-	public int proBullets, diffusionBullets, mayhemBullets;
-	public int posX;
-	public int posY;
 	
-	public PlayerShip (int vida,int combustible){
-		this.life= vida;
-		this.fuel=combustible;
-		this.proBullets = this.diffusionBullets = this.mayhemBullets = 0;
-		this.posX = 600;
-		this.posY = 600;
+	int X = 0;
+	int Xa = 0;
+	private Game game;
+	private final int Y = 565;
+	private final int WITH = 70;
+	private final int HEIGHT = 85;
+	public int life= 100;
+	public int fuel=40;
+	public int bullets=40;
+	public int Btype=0;
+	private Image Nave= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/NAVE.png").getImage();;
+	public boolean alive= true;
+	public int proBullets = 0, diffusionBullets = 0, mayhemBullets = 0;
+	
+	
+	public PlayerShip (Game game){
+		this.game = game;
+	}
+	
+	
+	public void move() {
+		if (X + Xa > 0 && X + Xa < game.getWidth()-60)
+			X = X + Xa;
 	}
 	
 	public void removesLife(int less){
@@ -25,6 +45,28 @@ public class PlayerShip {
 			kill();	
 		}	
 	}
+public void paint(Graphics2D g) 
+{
+	g.drawImage(Nave, X, Y, WITH , HEIGHT, null);
+}
+public void keyReleased(KeyEvent e) {
+	Xa = 0;
+}
+
+public void keyPressed(KeyEvent e) {
+	if (e.getKeyCode() == KeyEvent.VK_A||e.getKeyCode() == KeyEvent.VK_J)
+		Xa = -5;
+	if (e.getKeyCode() == KeyEvent.VK_D||e.getKeyCode() == KeyEvent.VK_L)
+		Xa = 5;
+	if (e.getKeyCode() == KeyEvent.VK_SPACE)
+		Xa=50;
+}public Rectangle getBounds() {
+	return new Rectangle(X, Y, WITH, HEIGHT);
+}
+
+public int getTopY() {
+	return Y - HEIGHT;
+}
 	
 	public void kill(){
 		life = 0;
@@ -64,11 +106,11 @@ public class PlayerShip {
 	public int getFuel(){
 		return fuel;	
 	}
-	public int getPosX() {
-		return posX;
+	public int getX() {
+		return X;
 	}
-	public int getPosY() {
-		return posY;
+	public int getY() {
+		return Y;
 	}
 	public int getProBullets() {
 		return proBullets;
@@ -91,11 +133,8 @@ public class PlayerShip {
 	public void setFuel(int combustible){
 		this.fuel=combustible;
 	}
-	public void setPosX(int posX) {
-		this.posX = posX;
-	}
-	public void setPosY(int posY) {
-		this.posY = posY;
+	public void setX(int X) {
+		this.X = X;
 	}
 	public void setProBullets(int proBullets) {
 		this.proBullets = proBullets;

@@ -17,9 +17,8 @@ public class Game extends JPanel {
 	
 	 
 	 
-	 PjNave nave1 = new PjNave(this);
-	//Ball ball = new Ball(this);
-	//Racquet racquet = new Racquet(this);
+	 PlayerShip nave1 = new PlayerShip(this);
+
  /** 
  * Constructor
  * */
@@ -43,8 +42,6 @@ public class Game extends JPanel {
 	}
 	
 	private void move() {
-		//ball.move();
-		//racquet.move();
 		nave1.move();
 	}
 
@@ -53,11 +50,8 @@ public class Game extends JPanel {
 		super.paint(g);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.drawImage(background, 0,0, null);
-		
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
-		//ball.paint(g2d);
-		//racquet.paint(g2d);
 		nave1.paint(g2d);
 	}
 	
