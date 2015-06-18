@@ -1,79 +1,66 @@
 package Objetos;
 
+/**
+ * Clase MayhemBullets
+ * @author arturo
+ *
+ */
 public class MayhemBullets {
-	public int life;
-	public int shipType;
 	public boolean alive;
 	public int posX;
 	public int posY;
-	
-	public MayhemBullets(int life, int shipType, int posX){
-		this.life = life;
-		this.shipType = shipType;
+
+	/**
+	 Constructor de la clase
+	 * @param posX - Parametro que indica la posicion en el eje X en donde
+	 * debe de aparecer la bala
+	 */
+	public MayhemBullets(int posX, int posY){
+		this.alive = true;
 		this.posX = posX;
-		this.posY = 0;
+		this.posY = posY;
 	}
-	
+
 	/**
-	 * Metodo que reduce la vida de las naves basicas por cada disparo
-	 */
-	public void removesLife(){
-		if (life < 2){
-			life = life-2;
-		}
-		else{
-			kill();
-		}
-	}
-	
-	/**
-	 * Metodo que mata la nave
-	 */
-	public void kill(){
-		life = 0;
-		alive = false;		
-	}
-	
-	/**
-	 * Funcion que retorna si la nave sigue con vida	
-	 * @return - booleano indicando si la nave sigue con vida
+	 * Funcion que retorna si la bala sigue con vida o debe desaparecer
+	 * @return - booleano indicando si la bala sigue con vida
 	 */
 	public boolean itsAlive() {
 		return alive;
 	}
-	
+
 	/**
-	 * Funcion para realizar el disparo
+	 * Metodo que cambia el estado de la bala, indicando que debe desaparecer
+	 * de la pantalla
 	 */
-	public void shoot(){
-		
+	public void disappears(){
+		alive = false;
 	}
-	
+
 	/**
-	 * Metodo que cambia las coordenadas de la nave, ocacionando el movimiento
+	 * Metodo que cambia las coordenadas de la bala, generando el movimiento
 	 */
-	public void move(){
-	/*******
+	public void mover(){
+
+	}
+
+	/******
 	 * Getters de la clase
-	 *******/
-	}
+	 ******/
 	public int getPosX() {
 		return posX;
 	}
 	public int getPosY() {
 		return posY;
 	}
-	/********
+
+	/******
 	 * Setters de la clase
-	 ********/
+	 ******/
 	public void setPosX(int posX) {
 		this.posX = posX;
 	}
 	public void setPosY(int posY) {
 		this.posY = posY;
 	}
-	
-	
-
 }
-

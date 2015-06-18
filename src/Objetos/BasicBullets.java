@@ -1,11 +1,13 @@
 package Objetos;
+
 /**
- * Clase DiffusionBullets
+ * Clase BasicBullets
  * @author arturo
  *
  */
-public class DiffusionBullets {
+public class BasicBullets {
 	public boolean alive;
+	public int quantity;
 	public int posX;
 	public int posY;
 
@@ -14,10 +16,11 @@ public class DiffusionBullets {
 	 * @param posX - Parametro que indica la posicion en el eje X en donde
 	 * debe de aparecer la bala
 	 */
-	public DiffusionBullets(int posX, int posY){
+	public BasicBullets(int posX){
 		this.alive = true;
+		this.quantity = 10;
 		this.posX = posX;
-		this.posY = posY;
+		this.posY = 0;
 	}
 
 	/**
@@ -46,6 +49,9 @@ public class DiffusionBullets {
 	/******
 	 * Getters de la clase
 	 ******/
+	public int getQuantity() {
+		return quantity;
+	}
 	public int getPosX() {
 		return posX;
 	}
@@ -56,6 +62,9 @@ public class DiffusionBullets {
 	/******
 	 * Setters de la clase
 	 ******/
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 	public void setPosX(int posX) {
 		this.posX = posX;
 	}
