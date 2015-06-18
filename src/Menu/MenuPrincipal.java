@@ -1,96 +1,85 @@
 package Menu;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Image;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
-import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
 
-public class MenuPrincipal implements ActionListener {
-	JFrame ventana,ventana2,ventana3;
-	JLabel textoVentana,textoVentana2,textoVentana3;
-	JButton botonVentana,botonVentana2;
-	JTextField entradaTextoVentana2;
-	JList<String> lista; 
-	String[] resultados = {"jahbd","sjdhb","hjdbvg","sdyg","shdbg","a","b","f","g"};
-	JScrollPane barraDesplazamiento;
+public class MenuPrincipal extends JFrame implements ActionListener {
 	
-	public void crearVentana(){
-		ventana=new JFrame();
-		ventana.setTitle("Crazy River Ride ++");
-		ventana.setLayout(new FlowLayout(FlowLayout.CENTER));
-		ventana.setSize(300,90);
-		ventana.setLocation(400, 300);
-		textoVentana=new JLabel();
-		textoVentana.setText("Para iniciar conectese al servidor");
-		botonVentana=new JButton();
-		botonVentana.setText("Conectar");
-		botonVentana.addActionListener(this);
-		ventana.add(textoVentana);
-		ventana.add(botonVentana);
-		ventana.setDefaultCloseOperation(ventana.EXIT_ON_CLOSE);
-		ventana.setVisible(true);
-	}
+	public Image imagenFondo;
+	public URL ruta;
+	public JButton boton;
+	public JButton boton3;
 	
-	public void crearVentana2(){
-		ventana2=new JFrame();
-		ventana2.setTitle("Busqueda Cliente");
-		ventana2.setLayout(new FlowLayout(FlowLayout.CENTER));
-		ventana2.setSize(600,120);
-		ventana2.setLocation(400, 300);
-		textoVentana2=new JLabel();
-		textoVentana2.setText("Ingrese lo que desea buscar");
-		entradaTextoVentana2=new JTextField(50);
-		botonVentana2=new JButton();
-		botonVentana2.setText("Buscar");
-		botonVentana2.addActionListener(this);
-		ventana2.add(textoVentana2);
-		ventana2.add(entradaTextoVentana2);
-		ventana2.add(botonVentana2);
-		ventana2.setDefaultCloseOperation(ventana2.EXIT_ON_CLOSE);
+	
+	
+	public MenuPrincipal() {
+		this.setBounds(0, 0, 800, 600);
+		this.setTitle("Crazy River Ride ++");
+		
+		this.setLocationRelativeTo(null);
+		
+		ruta=this.getClass().getResource("/Menu/fondo.jpg");
+		imagenFondo= new ImageIcon(ruta).getImage();
+		
+		boton=new JButton();
+		boton.setText("Iniciar");
+		boton.addActionListener(this);
+		
+		boton3=new JButton();
+		boton3.setText("Fin");
+		boton3.addActionListener(this);
+		
+		panel.add(boton);
+		panel.add(boton3);
+		
+		Container contenedor= getContentPane();
+		contenedor.add(panel);
+		this.setVisible(true);
+		
+		
+		
 		
 	}
-	public void crearVentana3(){
-		ventana3=new JFrame();
-		ventana3.setTitle("Resultados Cliente");
-		ventana3.setLayout(new FlowLayout(FlowLayout.CENTER));
-		ventana3.setSize(600,400);
-		ventana3.setLocation(300, 200);
-		textoVentana3=new JLabel();
-		textoVentana3.setText("Los resultados de la busqueda son:");
-		lista=new JList<String>(resultados);
-		lista.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-		barraDesplazamiento=new JScrollPane(lista);
-		ventana3.add(textoVentana3);
-		ventana3.add(barraDesplazamiento);
-		//ventana3.add(lista);
-		ventana3.setDefaultCloseOperation(ventana3.EXIT_ON_CLOSE);
-		
-	}
-	
+	public JPanel panel=new JPanel(){
+		public void paintComponent(Graphics g){
+			g.drawImage(imagenFondo, 0, 0, getWidth(), getHeight(), this);
+
+		}
+	};
 	
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource()==botonVentana) {
-			ventana.setVisible(false);
-			//cliente1.intClient();
-			crearVentana2();
-			ventana2.setVisible(true);
+		if (e.getSource()==boton) {
+			System.out.println("Hola");
 			
 		}
-		if (e.getSource()==botonVentana2) {
-			ventana2.setVisible(false);
-			crearVentana3();
-			ventana3.setVisible(true);
+		if (e.getSource()==boton3) {
+			System.out.println("Chao");
+			
 		}
-		
 	}
-	
-	public MenuPrincipal(){
-		crearVentana();
-		
-	}
-	
 
 }
+
+
+
+
+
+

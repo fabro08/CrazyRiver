@@ -12,7 +12,6 @@ public class Main {
     public static void main(String[] args) {
     	
     	MenuPrincipal nemu = new MenuPrincipal();
-    	
 
 		/*System.out.println("Se crea el grafo\n");
 		Grafo gri=new Grafo(5);
