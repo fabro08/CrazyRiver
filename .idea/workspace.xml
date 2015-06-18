@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c3d3719-2b3d-42b1-b111-b9ee79bafb47" name="Default" comment="">
+    <list default="true" id="8c3d3719-2b3d-42b1-b111-b9ee79bafb47" name="Default" comment="Cambios en el grafo">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafos/CaminoCorto.java" afterPath="$PROJECT_DIR$/src/Grafos/CaminoCorto.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CrazyRiver.iws" />
@@ -37,8 +38,8 @@
       <file leaf-file-name="CaminoCorto.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Grafos/CaminoCorto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28321677">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.37762237">
+              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -47,8 +48,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.307693">
-              <caret line="53" column="60" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="60" />
+            <state vertical-scroll-proportion="-6.923077">
+              <caret line="54" column="46" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -81,6 +82,7 @@
         <option value="$PROJECT_DIR$/src/Objetos/Bridge.java" />
         <option value="$PROJECT_DIR$/src/Grafos/Nodo.java" />
         <option value="$PROJECT_DIR$/src/Grafos/Grafo.java" />
+        <option value="$PROJECT_DIR$/src/Grafos/CaminoCorto.java" />
       </list>
     </option>
   </component>
@@ -403,7 +405,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434589223398</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cambios en el grafo">
+      <created>1434589420165</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1434589420165</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -567,14 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grafos/Nodo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.230769">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Grafos/Grafo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.5185184">
@@ -583,18 +583,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grafos/Nodo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.230769">
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.307693">
-          <caret line="53" column="60" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="60" />
+        <state vertical-scroll-proportion="-6.923077">
+          <caret line="54" column="46" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grafos/CaminoCorto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28321677">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.37762237">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
           <folding />
         </state>
       </provider>
