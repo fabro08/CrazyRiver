@@ -21,18 +21,13 @@ public class Grafo {
         nodosMaximos=cantidadN;
 		listaNodos= new Nodo[nodosMaximos];
 		matrizAdyacenciaDirijida=new int[nodosMaximos][nodosMaximos];
+		matrizAdyacenciaNoDirijida=new int[nodosMaximos][nodosMaximos];
         for (int i = 0; i < nodosMaximos; i++) {
             for (int j = 0; j <nodosMaximos; j++) {
                 matrizAdyacenciaDirijida[i][j]=0;
-            }
-        }
-        matrizAdyacenciaNoDirijida=new int[nodosMaximos][nodosMaximos];
-        for (int i = 0; i < nodosMaximos; i++) {
-            for (int j = 0; j <nodosMaximos; j++) {
                 matrizAdyacenciaNoDirijida[i][j]=0;
             }
         }
-
 	}
 	
 	public void insertarNodo(Object datoN){
