@@ -15,7 +15,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Toolkit;
-import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 /*import Sockets.Cliente;
@@ -98,6 +97,8 @@ public class menu extends JFrame implements ActionListener {
 
 		/** Si se presiona el boton buscar */
 		if (boton.getSource() == BotonBuscar) {
+			add(new Tablero());
+			setVisible(true);
 			//cliente.IniciarCliente(entradaTexto.getText(), Dirip, Dirpuerto);
 			//VentanaResultados aResultados = new VentanaResultados();
 			//aResultados.setVisible(true);

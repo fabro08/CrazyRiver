@@ -19,11 +19,21 @@ public class Tablero extends JPanel implements Runnable{
     private final int DELAY=5;
     private JButton boton;
     
+    /*public void ventana(){
+        setTitle("Crazy River Ride++");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(1200,700);
+        setLocationRelativeTo(null);
+        setResizable(true);
+    	
+    	
+    }*/
+    
     public Tablero(){
     	
-    	boton.setText("Search");
-		boton.setBounds(200, 200, 200, 30);
-		boton.addActionListener((ActionListener) this);
+    	//boton.setText("Search");
+		//boton.setBounds(200, 200, 200, 30);
+		//boton.addActionListener((ActionListener) this);
         setBackground(Color.white);
         setDoubleBuffered(true);
  
@@ -55,7 +65,7 @@ public class Tablero extends JPanel implements Runnable{
         g2.drawImage(bart,x+500,y+200, null);
         Toolkit.getDefaultToolkit().sync();
         g.dispose();
-        this.add(boton);
+        //this.add(boton);
     }
     
     public void ciclo(){
