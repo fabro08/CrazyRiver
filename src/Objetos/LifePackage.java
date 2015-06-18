@@ -30,6 +30,10 @@ public class LifePackage {
 	public void kill(){
 		this.alive = false;
 	}
+	
+	public void mover(){
+		
+	}
 	/********
 	 * Getters de la clase
 	 ********/
