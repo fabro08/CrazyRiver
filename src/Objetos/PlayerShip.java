@@ -10,8 +10,7 @@ import javax.swing.ImageIcon;
 import Interfaz.Game;
 
 public class PlayerShip {
-	
-	
+	//coments
 	int X = 0;
 	int Xa = 0;
 	private Game game;
