@@ -3,19 +3,54 @@ package Objetos;
 public class PlayerShip {
 	
 	public int life;
+	public boolean alive;
 	public int fuel;
-	public int bullets;
-	public int Btype; //Esta variable es para saber que tipo de bala tiene
+	public int proBullets, diffusionBullets, mayhemBullets;
 	public int posX;
 	public int posY;
 	
-	public PlayerShip (int vida,int combustible,int balas,int typo){
+	public PlayerShip (int vida,int combustible){
 		this.life= vida;
 		this.fuel=combustible;
-		this.bullets = balas;
-		this.Btype = typo;
+		this.proBullets = this.diffusionBullets = this.mayhemBullets = 0;
 		this.posX = 600;
 		this.posY = 600;
+	}
+	
+	public void removesLife(int less){
+		if (life < less){
+			life = life-less;
+		}
+		else if(life >= less){
+			kill();	
+		}	
+	}
+	
+	public void kill(){
+		life = 0;
+		alive = false;
+	}
+	
+	public void shoot(int bullet){
+		if (bullet == 2){
+			if (proBullets > 0)
+				//Dispara bala Pro
+				proBullets--;
+		}
+		else if (bullet == 3){
+			if (diffusionBullets > 0)
+				//Dispara bala Difusion
+				diffusionBullets--;
+		}
+		else if (bullet == 4){
+			if (mayhemBullets > 0)
+				//Dispara bala Mayhem
+				mayhemBullets--;
+		}
+		else {
+			//Dispara bala basica
+		}
+		
 	}
 	
 	/*********
@@ -29,19 +64,20 @@ public class PlayerShip {
 	public int getFuel(){
 		return fuel;	
 	}
-	public int getbullets(){
-		return bullets;	
-	}
-	public int getBtype(){
-		return Btype;	
-	}
-	
 	public int getPosX() {
 		return posX;
 	}
-
 	public int getPosY() {
 		return posY;
+	}
+	public int getProBullets() {
+		return proBullets;
+	}
+	public int getDiffusionBullets() {
+		return diffusionBullets;
+	}
+	public int getMayhemBullets() {
+		return mayhemBullets;
 	}
 
 	/*********
@@ -55,19 +91,20 @@ public class PlayerShip {
 	public void setFuel(int combustible){
 		this.fuel=combustible;
 	}
-	public void  setBullet(int balas){
-		this.bullets=balas;
-	}
-	public void setBulleType(int tipoB){
-		this.Btype=tipoB;
-	}
-
 	public void setPosX(int posX) {
 		this.posX = posX;
 	}
-
 	public void setPosY(int posY) {
 		this.posY = posY;
+	}
+	public void setProBullets(int proBullets) {
+		this.proBullets = proBullets;
+	}
+	public void setDiffusionBullets(int diffusionBullets) {
+		this.diffusionBullets = diffusionBullets;
+	}
+	public void setMayhemBullets(int mayhemBullets) {
+		this.mayhemBullets = mayhemBullets;
 	}
 	
 }
