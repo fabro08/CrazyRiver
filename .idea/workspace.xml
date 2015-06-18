@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c3d3719-2b3d-42b1-b111-b9ee79bafb47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Objetos/DiffusionBullets.java" />
+    <list default="true" id="8c3d3719-2b3d-42b1-b111-b9ee79bafb47" name="Default" comment="Agregada la clase MayhemBullets">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Objetos/MayhemBullets.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CrazyRiver.iws" />
@@ -487,7 +487,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434613982042</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Agregada la clase DiffusionBullets">
+      <created>1434614937555</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1434614937555</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -565,7 +571,8 @@
     <MESSAGE value="Actualizados los atributos posX y posY asi como sus getters y setters de todas las clases en el paquete Objetos" />
     <MESSAGE value="Agregadas las clases FuelPackage y LifePackage" />
     <MESSAGE value="Agregadas las clasesProBullets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregadas las clasesProBullets" />
+    <MESSAGE value="Agregada la clase DiffusionBullets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregada la clase DiffusionBullets" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
