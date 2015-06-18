@@ -14,10 +14,10 @@ import javax.swing.JPanel;
 
 public class Game extends JPanel {
 	 private Image background= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/background.jpg").getImage();;
-	
-	 
+	 public boolean bala= false;
 	 
 	 PlayerShip nave1 = new PlayerShip(this);
+	 BasicBullets basica = new BasicBullets(this);
 
  /** 
  * Constructor
@@ -43,16 +43,21 @@ public class Game extends JPanel {
 	
 	private void move() {
 		nave1.move();
+		//basica.move();
+		 	//nave1.shoot(1);
 	}
 
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.drawImage(background, 0,0, null);
+		//g2d.drawImage(background, 0,0, null);
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
 		nave1.paint(g2d);
+		if(bala){
+		basica.paint(g2d);
+		}
 	}
 	
 	public void gameOver() {

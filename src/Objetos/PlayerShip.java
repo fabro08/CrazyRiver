@@ -6,11 +6,10 @@ import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
-
 import Interfaz.Game;
 
 public class PlayerShip {
-	//coments
+	
 	int X = 0;
 	int Xa = 0;
 	private Game game;
@@ -20,7 +19,6 @@ public class PlayerShip {
 	public int life= 100;
 	public int fuel=40;
 	public int bullets=40;
-	public int Btype=0;
 	private Image Nave= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/NAVE.png").getImage();;
 	public boolean alive= true;
 	public int proBullets = 0, diffusionBullets = 0, mayhemBullets = 0;
@@ -58,7 +56,8 @@ public void keyPressed(KeyEvent e) {
 	if (e.getKeyCode() == KeyEvent.VK_D||e.getKeyCode() == KeyEvent.VK_L)
 		Xa = 5;
 	if (e.getKeyCode() == KeyEvent.VK_SPACE)
-		Xa=50;
+		System.out.println("Hola mundo");
+	   
 }public Rectangle getBounds() {
 	return new Rectangle(X, Y, WITH, HEIGHT);
 }
@@ -89,7 +88,8 @@ public int getTopY() {
 				mayhemBullets--;
 		}
 		else {
-			//Dispara bala basica
+			System.out.println("hola");
+			
 		}
 		
 	}
