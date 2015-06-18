@@ -16,7 +16,7 @@ public class main extends JFrame{
     		ImputStream in = new FileInputStream(sonido);
     		AudioStream audio = new AudioStream(in);
     	}*/
-        //TITULO....
+        //TITULO......
         setTitle("Crazy River Ride++");
         //CERRAR AL CLICKEAR EN LA CRUZ
         setDefaultCloseOperation(EXIT_ON_CLOSE);
