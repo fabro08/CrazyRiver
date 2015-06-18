@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c3d3719-2b3d-42b1-b111-b9ee79bafb47" name="Default" comment="Cambios en el grafo">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafos/CaminoCorto.java" afterPath="$PROJECT_DIR$/src/Grafos/CaminoCorto.java" />
+    <list default="true" id="8c3d3719-2b3d-42b1-b111-b9ee79bafb47" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CrazyRiver.iws" />
@@ -411,7 +410,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434589420165</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cambios en CaminoCorto">
+      <created>1434589726676</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1434589726676</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -460,7 +465,8 @@
     <MESSAGE value="Agregadas las clases BasicEnemyShip, PlayerShip, Bullets y Bridge, a falta de modificaciones para su correcto uso!!!" />
     <MESSAGE value="cambios en el nodo" />
     <MESSAGE value="Cambios en el grafo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en el grafo" />
+    <MESSAGE value="Cambios en CaminoCorto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en CaminoCorto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
