@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import Grafos.Grafo;
 import Menu.MenuPrincipal;
+import Menu.Principal;
+import Menu.Sonido;
 
 /**
  * Created by steven on 17/06/15.
@@ -11,7 +13,8 @@ import Menu.MenuPrincipal;
 public class Main {
     public static void main(String[] args) {
     	
-    	MenuPrincipal nemu = new MenuPrincipal();
+    	Principal nemu = new Principal();
+    	Sonido re=new Sonido("sonidoFondo.wav",86);
 
 		/*System.out.println("Se crea el grafo\n");
 		Grafo gri=new Grafo(5);

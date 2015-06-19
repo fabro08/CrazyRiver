@@ -23,10 +23,11 @@ import javax.swing.border.LineBorder;
 
 public class MenuPrincipal extends JFrame implements ActionListener {
 	
-	public Image imagenFondo;
+	public Image imagenFondo1;
 	public URL ruta;
 	public JButton boton;
 	public JButton boton3;
+	public JLabel entrada;
 	
 	
 	
@@ -37,7 +38,7 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 		this.setLocationRelativeTo(null);
 		
 		ruta=this.getClass().getResource("/Menu/fondo.jpg");
-		imagenFondo= new ImageIcon(ruta).getImage();
+		imagenFondo1= new ImageIcon(ruta).getImage();
 		
 		boton=new JButton();
 		boton.setText("Iniciar");
@@ -47,20 +48,21 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 		boton3.setText("Fin");
 		boton3.addActionListener(this);
 		
+		entrada=new JLabel();
+		entrada.setText("Crazy River Ride ++ es un juego de estrategia en el cual la nave tiene diferentes tipos de armas la cuales se encuentran durante el juego, debe destruir todo lo que se encuentre a su paso, tambien encontrara paquetes de vida y combustible");
+		
 		panel.add(boton);
 		panel.add(boton3);
+		panel.add(entrada);
 		
 		Container contenedor= getContentPane();
 		contenedor.add(panel);
 		this.setVisible(true);
 		
-		
-		
-		
 	}
 	public JPanel panel=new JPanel(){
 		public void paintComponent(Graphics g){
-			g.drawImage(imagenFondo, 0, 0, getWidth(), getHeight(), this);
+			g.drawImage(imagenFondo1, 0, 0, getWidth(), getHeight(), this);
 
 		}
 	};
