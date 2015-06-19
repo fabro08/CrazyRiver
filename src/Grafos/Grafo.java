@@ -3,9 +3,10 @@ package Grafos;
 import java.util.ArrayList;
 
 /**
- * 
- * @author steven
- *
+ * Clase Grafo
+ * @author Steven, Fabricio, Arturo, Wilson
+ * @category Estructura Distribuida
+ * @version 1.0
  */
 public class Grafo {
     private int nodosMaximos;

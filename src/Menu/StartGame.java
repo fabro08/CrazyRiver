@@ -12,7 +12,10 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
+
+import Sockets.Servidor;
 
 public class StartGame implements ActionListener{
 
@@ -61,7 +64,9 @@ public class StartGame implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource()==btnPlayGame) {
-			
+			Servidor  aServidor = new Servidor();
+			aServidor.initServer();
+
 			
 		}
 		if (e.getSource()==btnExit) {
