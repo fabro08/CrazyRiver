@@ -2,6 +2,7 @@ package Objetos;
 
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.Rectangle;
 
 import javax.swing.ImageIcon;
 
@@ -18,7 +19,7 @@ public class BasicBullets {
 	public int y;
 	int xa = 1;
 	int ya = 1;
-	private Image Bala= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img/bala.png").getImage();;
+	private Image Bala= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img//bala.png").getImage();;
 	private Game game;
 	private final int WITH = 70;
 	private final int HEIGHT = 85;
@@ -41,16 +42,31 @@ public class BasicBullets {
 	 */
 	public void move() {
 		if (y - ya < 0)
-			ya = 1;
-		if (y + ya > game.getHeight()-DIAMETER)//Margen inferior
-			//game.gameOver();
-		/*if(collision()){
-			ya = -1;
-			y = game.racquet.getTopY() - DIAMETER;
-		}*/
-		x = x - xa;
+			ya = 1;		
+		if(collision()){
+			game.setEnemis(false);
+			game.setPuente(false);
+		}
+		//x = x - xa;
 		y = y - 5;
 	}
+	
+	private boolean collision() {
+		/*if (game.getKamyEnemy()){
+			return game.kamik.getBounds().intersects(getBounds());}
+		else if (game.getBridge()){
+			return game.puente.getBounds().intersects(getBounds());}*/
+		//return alive;
+		//return game.puente.getBounds().intersects(getBounds());
+		return game.puente.getBounds().intersects(getBounds());
+		
+		}
+		
+	
+	public Rectangle getBounds() {
+		return new Rectangle(x, y, 10, 10);
+	}
+	
 	public void paint(Graphics2D g) 
 	{
 		g.drawImage(Bala, x, y, WITH , HEIGHT, null);

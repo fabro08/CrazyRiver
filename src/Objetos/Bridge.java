@@ -1,16 +1,54 @@
 package Objetos;
 
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Rectangle;
+
+import javax.swing.ImageIcon;
+
+import Interfaz.Game;
+
 public class Bridge {
+	private Game game;
 	public int life;
 	public boolean alive;
-	public int posX;
-	public int posY;
+	public int X;
+	public int Y;
+	private Image bridge= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img/Bridge.png").getImage();;
+	private final int WITH = 70;
+	private final int HEIGHT = 85;
+	private final int DIAMETER = 100;
+	int xa = 1;
+	int ya = 1;
 	
-	public Bridge(int life){
-		this.life = life;
+	public Bridge(Game game){
+		this.game = game;
+		this.life = 0; //agregar vida aleatoria 
 		this.alive = true;
-		this.posX = 100;
-		this.posY = 0;
+		this.X = 400;
+		this.Y = 0;
+	}
+	public void move() {
+		if (X + xa < 0)
+		if (X + xa > game.getWidth() - DIAMETER)
+			xa = -1;
+		if(collision()){
+			game.nave1.removesLife(50);
+			game.setPuente(false);  
+			
+		}
+	    Y = Y + ya;
+	}
+	private boolean collision() {
+		return game.nave1.getBounds().intersects(getBounds());
+	}	
+	public Rectangle getBounds() {
+		return new Rectangle(X, Y, 40, 40);
+	}
+	
+	public void paint(Graphics2D g) 
+	{
+		g.drawImage(bridge, X, Y, WITH , HEIGHT, null);
 	}
 	
 	/**
@@ -38,9 +76,6 @@ public class Bridge {
 		this.alive = false;		
 	}
 	
-	public void move(){
-		
-	}
 
 	
 	/*********
@@ -52,10 +87,10 @@ public class Bridge {
 		return life;
 	}
 	public int getPosX() {
-		return posX;
+		return X;
 	}
 	public int getPosY() {
-		return posY;
+		return Y;
 	}
 
 	/*********
@@ -67,10 +102,10 @@ public class Bridge {
 		this.life = life;
 	}
 	public void setPosX(int posX) {
-		this.posX = posX;
+		this.X = posX;
 	}
 	public void setPosY(int posY) {
-		this.posY = posY;
+		this.Y = posY;
 	}
 
 }

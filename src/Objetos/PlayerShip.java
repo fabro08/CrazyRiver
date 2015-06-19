@@ -7,69 +7,86 @@ import Interfaz.Game;
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 
-import Interfaz.Game;
-import Sockets.Servidor;
-
 public class PlayerShip {
 	
-	int X = 200;
+	int X = 420;
+	int Xa = 0;
+	int cont=0;
+	public ArrayList<BasicBullets> balas = new ArrayList<BasicBullets>();
+	public BasicBullets bullet;
 	private Game game;
 	private final int Y = 565;
 	private final int WITH = 70;
 	private final int HEIGHT = 85;
+	private final int DIAMETER = 30;
 	public int life= 100;
 	public int fuel=40;
 	public int bullets=40;
-	private Image Nave= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img//NAVE.png").getImage();;
+	private Image Nave= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img/NAVE.png").getImage();;
 	public boolean alive= true;
 	public int proBullets = 0, diffusionBullets = 0, mayhemBullets = 0;
-
-	
-	
 	public BasicBullets Basica;
+	
+	
 	public PlayerShip (Game game){
 		this.game = game;
+	
 	}
 	
 
-	public void move(int x) {
-		if(X<=0){
-			X=x+815;
-		}
-		else if(X>=815){
-			X=x;
-		}
-	
-		else if (x>0){
-			X+=200;
+	public void move(int x, int choose, boolean shoot) {
+		if (choose==1){
+			movePhone(x,shoot);
 			
-		}
-		else if(x<0){
-			X-=200;;
 			
+			}
+		
+
+		else{	
+			
+		if (X + Xa > 0 && X + Xa < game.getWidth()-60)
+		X = X + Xa;
 		}
 		
-	
-	//	if (X + Xa > 0 && X + Xa < game.getWidth()-60)
-		//	X = X + Xa;
 		
-		
-		
-		System.out.println(X);
 		
 	}
 	
 	
+	private void movePhone(int x,boolean shoot) {
+		
+		if(shoot==true){
+			bullet = new BasicBullets(game,X,Y-35);
+			balas.add(bullet);
+			cont++;
+			game.nave1.shoot(1);
+			
+			
+			
+		}
+		
+		if (x>0){
+		X-=20;
+			
+		}
+		else
+			X+=20;
+
+		}
+	
+
+
 	public void removesLife(int less){
 		if (life < less){
 			life = life-less;
 		}
 		else if(life >= less){
 			kill();	
-		}	
+		}
 	}
 	public void paint(Graphics2D g) 
 	{
@@ -80,15 +97,19 @@ public class PlayerShip {
 	}
 	
 	public void keyPressed(KeyEvent e) {
-	
-		if (e.getKeyCode() == KeyEvent.VK_A||e.getKeyCode() == KeyEvent.VK_J)
-			Xa = -5;
-		if (e.getKeyCode() == KeyEvent.VK_D||e.getKeyCode() == KeyEvent.VK_L)
-			Xa = +5;
+		if (e.getKeyCode() == KeyEvent.VK_A||e.getKeyCode() == KeyEvent.VK_J){
+			Xa = -15;}
+		if (e.getKeyCode() == KeyEvent.VK_D||e.getKeyCode() == KeyEvent.VK_L){
+			Xa = 15;}
 		if (e.getKeyCode() == KeyEvent.VK_SPACE){
-			Basica = new BasicBullets(game,X,Y-35);
-			game.nave1.shoot(1);
+			bullet = new BasicBullets(game,X,Y-35);
+			balas.add(bullet);
+			cont++;
+			game.nave1.shoot(1);}
+		if(e.getKeyCode() == KeyEvent.VK_E){
+			System.out.println("Cambio de bala");
 		}
+		
 		   
 	}public Rectangle getBounds() {
 		return new Rectangle(X, Y, WITH, HEIGHT);

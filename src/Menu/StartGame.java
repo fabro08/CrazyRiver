@@ -22,6 +22,7 @@ public class StartGame implements ActionListener{
 	private JFrame ventana;
 	private JButton btnPlayGame;
 	private JButton btnExit;
+	Servidor  aServidor = new Servidor();
 
 
 	/**
@@ -64,8 +65,9 @@ public class StartGame implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource()==btnPlayGame) {
-			Servidor  aServidor = new Servidor();
-			aServidor.initServer();
+			
+			aServidor.initServer(7);
+			ventana.setVisible(false);
 
 			
 		}

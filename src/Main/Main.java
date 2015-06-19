@@ -6,16 +6,20 @@ import Grafos.Grafo;
 import Menu.MenuPrincipal;
 import Menu.Principal;
 import Menu.Sonido;
+import Menu.StartGame;
+import Sockets.Servidor;
 
 /**
  * Created by steven on 17/06/15.
  */
 public class Main {
     public static void main(String[] args) {
+    Servidor aServidor = new Servidor();
+    	aServidor.initServer(1);
+    //; 
+    //Principal menu =  new Principal();
+    
     	
-    	Principal nemu = new Principal();
-    	Sonido re=new Sonido("sonidoFondo.wav",86);
-
 		/*System.out.println("Se crea el grafo\n");
 		Grafo gri=new Grafo(5);
 
