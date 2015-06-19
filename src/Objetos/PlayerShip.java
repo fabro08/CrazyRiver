@@ -1,21 +1,99 @@
 package Objetos;
 
+import java.awt.Graphics2D;
+import Interfaz.Game;
+import java.awt.Image;
+import java.awt.Rectangle;
+import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
+import Interfaz.Game;
+
 public class PlayerShip {
 	
-	public int life;
-	public int fuel;
-	public int bullets;
-	public int Btype; //Esta variable es para saber que tipo de bala tiene
-	public int posX;
-	public int posY;
+	int X = 0;
+	int Xa = 0;
+	private Game game;
+	private final int Y = 565;
+	private final int WITH = 70;
+	private final int HEIGHT = 85;
+	public int life= 100;
+	public int fuel=40;
+	public int bullets=40;
+	private Image Nave= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/NAVE.png").getImage();;
+	public boolean alive= true;
+	public int proBullets = 0, diffusionBullets = 0, mayhemBullets = 0;
 	
-	public PlayerShip (int vida,int combustible,int balas,int typo){
-		this.life= vida;
-		this.fuel=combustible;
-		this.bullets = balas;
-		this.Btype = typo;
-		this.posX = 600;
-		this.posY = 600;
+	public BasicBullets Basica;
+	public PlayerShip (Game game){
+		this.game = game;
+	}
+	
+
+	public void move() {
+		if (X + Xa > 0 && X + Xa < game.getWidth()-60)
+			X = X + Xa;
+	}
+	
+	public void removesLife(int less){
+		if (life < less){
+			life = life-less;
+		}
+		else if(life >= less){
+			kill();	
+		}	
+	}
+	public void paint(Graphics2D g) 
+	{
+		g.drawImage(Nave, X, Y, WITH , HEIGHT, null);
+	}
+	public void keyReleased(KeyEvent e) {
+		Xa = 0;
+	}
+	
+	public void keyPressed(KeyEvent e) {
+		if (e.getKeyCode() == KeyEvent.VK_A||e.getKeyCode() == KeyEvent.VK_J)
+			Xa = -5;
+		if (e.getKeyCode() == KeyEvent.VK_D||e.getKeyCode() == KeyEvent.VK_L)
+			Xa = 5;
+		if (e.getKeyCode() == KeyEvent.VK_SPACE){
+			Basica = new BasicBullets(game,X,Y-35);
+			game.nave1.shoot(1);
+		}
+		   
+	}public Rectangle getBounds() {
+		return new Rectangle(X, Y, WITH, HEIGHT);
+	}
+
+	public int getTopY() {
+		return Y - HEIGHT;
+}
+	
+	public void kill(){
+		life = 0;
+		alive = false;
+	}
+	
+	public void shoot(int bullet){
+		if (bullet == 2){
+			if (proBullets > 0)
+				//Dispara bala Pro
+				proBullets--;
+		}
+		else if (bullet == 3){
+			if (diffusionBullets > 0)
+				//Dispara bala Difusion
+				diffusionBullets--;
+		}
+		else if (bullet == 4){
+			if (mayhemBullets > 0)
+				//Dispara bala Mayhem
+				mayhemBullets--;
+		}
+		else {
+			game.bala = true;
+			
+		}
+		
 	}
 	
 	/*********
@@ -29,19 +107,20 @@ public class PlayerShip {
 	public int getFuel(){
 		return fuel;	
 	}
-	public int getbullets(){
-		return bullets;	
+	public int getX() {
+		return X;
 	}
-	public int getBtype(){
-		return Btype;	
+	public int getY() {
+		return Y;
 	}
-	
-	public int getPosX() {
-		return posX;
+	public int getProBullets() {
+		return proBullets;
 	}
-
-	public int getPosY() {
-		return posY;
+	public int getDiffusionBullets() {
+		return diffusionBullets;
+	}
+	public int getMayhemBullets() {
+		return mayhemBullets;
 	}
 
 	/*********
@@ -55,19 +134,17 @@ public class PlayerShip {
 	public void setFuel(int combustible){
 		this.fuel=combustible;
 	}
-	public void  setBullet(int balas){
-		this.bullets=balas;
+	public void setX(int X) {
+		this.X = X;
 	}
-	public void setBulleType(int tipoB){
-		this.Btype=tipoB;
+	public void setProBullets(int proBullets) {
+		this.proBullets = proBullets;
 	}
-
-	public void setPosX(int posX) {
-		this.posX = posX;
+	public void setDiffusionBullets(int diffusionBullets) {
+		this.diffusionBullets = diffusionBullets;
 	}
-
-	public void setPosY(int posY) {
-		this.posY = posY;
+	public void setMayhemBullets(int mayhemBullets) {
+		this.mayhemBullets = mayhemBullets;
 	}
 	
 }

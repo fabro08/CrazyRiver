@@ -1,49 +1,36 @@
 package Objetos;
 
-public class PersecutorShip {
-	int life;
+public class FuelPackage {
 	public boolean alive;
+	public int quantity;
 	public int posX;
 	public int posY;
 	
-	public PersecutorShip(){
-		this.life = 4;
+	public FuelPackage(int quantity, int posX){
 		this.alive = true;
-		this.posX = 0;
-		this.posY = 0;
-	}
-	
-	public void removesLife(){
-		if (life == 4){
-			life = life-2;
-		} else {
-			kill();
-		}
-	}
-
-	private void kill() {
-		life = 0;
-		alive = false;
+		this.quantity = quantity;
 	}
 	
 	public boolean itsAlive(){
 		return alive;
 	}
 	
-	public void shoot(){
-		
+	public void disappear(){
+		alive = false;
 	}
 	
-	/**
-	 * Metodo que cambia las coordenadas de la nave, ocacionando el movimiento
-	 */
-	public void move(){
-		
+	public void kill(){
+		//Explosion
+		alive = false;
 	}
 	
 	/******
 	 * Getters de la clase
 	 ******/
+
+	public int getQuantity() {
+		return quantity;
+	}
 	public int getPosX() {
 		return posX;
 	}
@@ -57,7 +44,11 @@ public class PersecutorShip {
 	public void setPosX(int posX) {
 		this.posX = posX;
 	}
+
+
+
 	public void setPosY(int posY) {
 		this.posY = posY;
 	}
+	
 }

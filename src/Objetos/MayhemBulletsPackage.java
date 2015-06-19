@@ -1,13 +1,13 @@
 package Objetos;
 
-public class BasicEnemyShip {
+public class MayhemBulletsPackage {
 	public int life;
 	public int shipType;
 	public boolean alive;
 	public int posX;
 	public int posY;
 	
-	public BasicEnemyShip(int life, int shipType, int posX){
+	public MayhemBulletsPackage(int life, int shipType, int posX){
 		this.life = life;
 		this.shipType = shipType;
 		this.posX = posX;
@@ -76,3 +76,4 @@ public class BasicEnemyShip {
 	
 
 }
+
