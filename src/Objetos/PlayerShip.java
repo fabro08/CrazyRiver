@@ -28,7 +28,7 @@ public class PlayerShip {
 		this.game = game;
 	}
 	
-	//s
+
 	public void move() {
 		if (X + Xa > 0 && X + Xa < game.getWidth()-60)
 			X = X + Xa;
