@@ -18,7 +18,7 @@ public class BasicBullets {
 	public int y;
 	int xa = 1;
 	int ya = 1;
-	private Image Bala= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/bala.png").getImage();;
+	private Image Bala= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img/bala.png").getImage();;
 	private Game game;
 	private final int WITH = 70;
 	private final int HEIGHT = 85;

@@ -1,17 +1,21 @@
 package Objetos;
 
 import java.awt.Graphics2D;
+
 import Interfaz.Game;
+
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
+
 import javax.swing.ImageIcon;
+
 import Interfaz.Game;
+import Sockets.Servidor;
 
 public class PlayerShip {
 	
-	int X = 0;
-	int Xa = 0;
+	int X = 200;
 	private Game game;
 	private final int Y = 565;
 	private final int WITH = 70;
@@ -19,9 +23,11 @@ public class PlayerShip {
 	public int life= 100;
 	public int fuel=40;
 	public int bullets=40;
-	private Image Nave= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/NAVE.png").getImage();;
+	private Image Nave= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img//NAVE.png").getImage();;
 	public boolean alive= true;
 	public int proBullets = 0, diffusionBullets = 0, mayhemBullets = 0;
+
+	
 	
 	public BasicBullets Basica;
 	public PlayerShip (Game game){
@@ -29,10 +35,33 @@ public class PlayerShip {
 	}
 	
 
-	public void move() {
-		if (X + Xa > 0 && X + Xa < game.getWidth()-60)
-			X = X + Xa;
+	public void move(int x) {
+		if(X<=0){
+			X=x+815;
+		}
+		else if(X>=815){
+			X=x;
+		}
+	
+		else if (x>0){
+			X+=200;
+			
+		}
+		else if(x<0){
+			X-=200;;
+			
+		}
+		
+	
+	//	if (X + Xa > 0 && X + Xa < game.getWidth()-60)
+		//	X = X + Xa;
+		
+		
+		
+		System.out.println(X);
+		
 	}
+	
 	
 	public void removesLife(int less){
 		if (life < less){
@@ -51,10 +80,11 @@ public class PlayerShip {
 	}
 	
 	public void keyPressed(KeyEvent e) {
+	
 		if (e.getKeyCode() == KeyEvent.VK_A||e.getKeyCode() == KeyEvent.VK_J)
 			Xa = -5;
 		if (e.getKeyCode() == KeyEvent.VK_D||e.getKeyCode() == KeyEvent.VK_L)
-			Xa = 5;
+			Xa = +5;
 		if (e.getKeyCode() == KeyEvent.VK_SPACE){
 			Basica = new BasicBullets(game,X,Y-35);
 			game.nave1.shoot(1);

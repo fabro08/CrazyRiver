@@ -1,11 +1,14 @@
 package Interfaz;
 import Objetos.*;
+import Sockets.Servidor;
+
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.RenderingHints;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -13,7 +16,7 @@ import javax.swing.JPanel;
 
 
 public class Game extends JPanel {
-	 private Image background= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/background.jpg").getImage();;
+	 private Image background= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img/background.jpg").getImage();;
 	 public boolean bala= false;
 	 
 	 public PlayerShip nave1 = new PlayerShip(this);
@@ -42,8 +45,9 @@ public class Game extends JPanel {
 		setFocusable(true);
 	}
 	
-	private void move() {
-		nave1.move();
+	public void move(int x) {
+		nave1.move(x);
+		
 		if (bala)
 		nave1.Basica.move();
 	}
@@ -66,18 +70,8 @@ public class Game extends JPanel {
 		System.exit(ABORT);
 	}
 
-	public static void main(String[] args) throws InterruptedException {
-		JFrame frame = new JFrame("CRAZY RIVER RIDE++");
-		Game game = new Game();
 		
-		frame.add(game);
-		frame.setSize(900,700);
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		while (true) {
-			game.move();
-			game.repaint();
-			Thread.sleep(10);
-		}
-	}
+	
+		
+	
 }

@@ -39,9 +39,9 @@ public class Tablero extends JPanel implements Runnable{
  
 
         
-        background = new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/background.jpg").getImage();
-        angrybird = new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/angrybird.png").getImage();
-        bart= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/images.jpg").getImage();
+        background = new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img/background.jpg").getImage();
+        angrybird = new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img/angrybird.png").getImage();
+        bart= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img/images.jpg").getImage();
         //angrybird= new ImageIcon(getClass().getResource("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/angrybird.jpg"));
         //background = new ImageIcon(this.getClass().getResource("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/background.jpg")).getImage();
        
