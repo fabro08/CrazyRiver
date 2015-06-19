@@ -19,7 +19,7 @@ public class PlayerShip {
 	public int life= 100;
 	public int fuel=40;
 	public int bullets=40;
-	private Image Nave= new ImageIcon("/home/arturo/git/CrazyRiver/src/img/NAVE.png").getImage();;
+	private Image Nave= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/NAVE.png").getImage();;
 	public boolean alive= true;
 	public int proBullets = 0, diffusionBullets = 0, mayhemBullets = 0;
 	
@@ -56,7 +56,7 @@ public class PlayerShip {
 		if (e.getKeyCode() == KeyEvent.VK_D||e.getKeyCode() == KeyEvent.VK_L)
 			Xa = 5;
 		if (e.getKeyCode() == KeyEvent.VK_SPACE){
-			Basica = new BasicBullets(game);
+			Basica = new BasicBullets(game,X,Y-35);
 			game.nave1.shoot(1);
 		}
 		   

@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 
 public class Game extends JPanel {
-	 private Image background= new ImageIcon("/home/arturo/git/CrazyRiver/src/img/background.jpg").getImage();;
+	 private Image background= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/background.jpg").getImage();;
 	 public boolean bala= false;
 	 
 	 public PlayerShip nave1 = new PlayerShip(this);

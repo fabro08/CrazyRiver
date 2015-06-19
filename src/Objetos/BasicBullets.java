@@ -18,7 +18,7 @@ public class BasicBullets {
 	public int y;
 	int xa = 1;
 	int ya = 1;
-	private Image Bala= new ImageIcon("/home/arturo/git/CrazyRiver/src/img/bala.png").getImage();;
+	private Image Bala= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/bala.png").getImage();;
 	private Game game;
 	private final int WITH = 70;
 	private final int HEIGHT = 85;
@@ -29,31 +29,27 @@ public class BasicBullets {
 	 * @param posX - Parametro que indica la posicion en el eje X en donde
 	 * debe de aparecer la bala
 	 */
-	public BasicBullets(Game game){
+	public BasicBullets(Game game, int x, int y){
 		this.game = game;
 		this.alive = true;
-		this.x = 100;
-		this.y = 100;
+		this.x = x;
+		this.y = y;
 	}
 	
 	/**
 	 * Metodo que cambia las coordenadas de la bala, generando el movimiento
 	 */
 	public void move() {
-		if (x + xa < 0)
-			xa = 1;
-		if (x + xa > game.getWidth() - DIAMETER)
-			xa = -1;
-		if (y + ya < 0)
+		if (y - ya < 0)
 			ya = 1;
 		if (y + ya > game.getHeight()-DIAMETER)//Margen inferior
-			game.gameOver();
+			//game.gameOver();
 		/*if(collision()){
 			ya = -1;
 			y = game.racquet.getTopY() - DIAMETER;
 		}*/
-		x = x + xa;
-		y = y + 5;
+		x = x - xa;
+		y = y - 5;
 	}
 	public void paint(Graphics2D g) 
 	{
