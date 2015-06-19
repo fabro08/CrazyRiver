@@ -21,7 +21,7 @@ public class Game extends JPanel {
      public KamikazeShip kamik = new KamikazeShip(this);
      public Bridge puente =  new Bridge(this);
      
-     public boolean KamiEnemy= true;// Variable que va a decir si se activa un enemigo 
+     public boolean KamiEnemy= true;// Variable que va a adecir si se activa un enemigo
      public boolean Puente= false;
      
 
