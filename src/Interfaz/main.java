@@ -40,9 +40,9 @@ public class main extends JFrame{
     
     //METODO PRINCIPAL - SERA BUSCADO AL EJECUTAR UN PROGRAMA EN JAVA
     public static void main(String args[]){
-    	//new main();
-    	menu1 pene =  new menu1();
-    	pene.setVisible(true);
+    //	new main();
+    //	menu1 pene =  new menu1();
+    //	pene.setVisible(true);
        
     }
 }

@@ -1,9 +1,11 @@
 package Objetos;
 
 import java.awt.Graphics2D;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
 
 import Interfaz.Game;
-import Interfaz1.Game2;
 
 /**
  * Clase BasicBullets
@@ -16,7 +18,10 @@ public class BasicBullets {
 	public int y;
 	int xa = 1;
 	int ya = 1;
+	private Image Bala= new ImageIcon("/home/arturo/git/CrazyRiver/src/img/bala.png").getImage();;
 	private Game game;
+	private final int WITH = 70;
+	private final int HEIGHT = 85;
 	private final int DIAMETER = 30;
 
 	/**
@@ -30,6 +35,10 @@ public class BasicBullets {
 		this.x = 100;
 		this.y = 100;
 	}
+	
+	/**
+	 * Metodo que cambia las coordenadas de la bala, generando el movimiento
+	 */
 	public void move() {
 		if (x + xa < 0)
 			xa = 1;
@@ -48,7 +57,7 @@ public class BasicBullets {
 	}
 	public void paint(Graphics2D g) 
 	{
-		g.fillOval(x, y, 10, 10);
+		g.drawImage(Bala, x, y, WITH , HEIGHT, null);
 		
 		
 	}
@@ -70,12 +79,7 @@ public class BasicBullets {
 		alive = false;
 	}
 
-	/**
-	 * Metodo que cambia las coordenadas de la bala, generando el movimiento
-	 */
-	public void mover(){
 
-	}
 
 	/******
 	 * Getters de la clase

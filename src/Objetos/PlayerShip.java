@@ -19,11 +19,11 @@ public class PlayerShip {
 	public int life= 100;
 	public int fuel=40;
 	public int bullets=40;
-	private Image Nave= new ImageIcon("/home/wilson/CrazyRiverRide++/CrazyRiver/src/img/NAVE.png").getImage();;
+	private Image Nave= new ImageIcon("/home/arturo/git/CrazyRiver/src/img/NAVE.png").getImage();;
 	public boolean alive= true;
 	public int proBullets = 0, diffusionBullets = 0, mayhemBullets = 0;
 	
-	
+	public BasicBullets Basica;
 	public PlayerShip (Game game){
 		this.game = game;
 	}
@@ -42,28 +42,30 @@ public class PlayerShip {
 			kill();	
 		}	
 	}
-public void paint(Graphics2D g) 
-{
-	g.drawImage(Nave, X, Y, WITH , HEIGHT, null);
-}
-public void keyReleased(KeyEvent e) {
-	Xa = 0;
-}
+	public void paint(Graphics2D g) 
+	{
+		g.drawImage(Nave, X, Y, WITH , HEIGHT, null);
+	}
+	public void keyReleased(KeyEvent e) {
+		Xa = 0;
+	}
+	
+	public void keyPressed(KeyEvent e) {
+		if (e.getKeyCode() == KeyEvent.VK_A||e.getKeyCode() == KeyEvent.VK_J)
+			Xa = -5;
+		if (e.getKeyCode() == KeyEvent.VK_D||e.getKeyCode() == KeyEvent.VK_L)
+			Xa = 5;
+		if (e.getKeyCode() == KeyEvent.VK_SPACE){
+			Basica = new BasicBullets(game);
+			game.nave1.shoot(1);
+		}
+		   
+	}public Rectangle getBounds() {
+		return new Rectangle(X, Y, WITH, HEIGHT);
+	}
 
-public void keyPressed(KeyEvent e) {
-	if (e.getKeyCode() == KeyEvent.VK_A||e.getKeyCode() == KeyEvent.VK_J)
-		Xa = -5;
-	if (e.getKeyCode() == KeyEvent.VK_D||e.getKeyCode() == KeyEvent.VK_L)
-		Xa = 5;
-	if (e.getKeyCode() == KeyEvent.VK_SPACE)
-		System.out.println("Hola mundo");
-	   
-}public Rectangle getBounds() {
-	return new Rectangle(X, Y, WITH, HEIGHT);
-}
-
-public int getTopY() {
-	return Y - HEIGHT;
+	public int getTopY() {
+		return Y - HEIGHT;
 }
 	
 	public void kill(){
@@ -88,7 +90,7 @@ public int getTopY() {
 				mayhemBullets--;
 		}
 		else {
-			System.out.println("hola");
+			game.bala = true;
 			
 		}
 		
