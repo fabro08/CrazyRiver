@@ -12,16 +12,26 @@ import java.util.ArrayList;
 public class Nodo {
 	
 	public Object dato;
-	public Boolean visitado = false;
+	public double ejeX;
+	public double ejeY;
+	public boolean domo;
+	public boolean combustible;
+	public boolean visitado;
 	
 	/**
 	 * Construstor de la clase
 	 * Clase de tipo Nodo
 	 * @param datoN (dato del nuevo nodo)
 	 */
-	public Nodo(Object datoN){
+	public Nodo(Object datoN, double ejeXN,double ejeYN, boolean domoN ,boolean combustibleN){
 		//Se le asigna a objeto dato el valor de datoN(dato del nuevo nodo)
 		this.dato=datoN;
+		this.ejeX=ejeXN;
+		this.ejeY=ejeYN;
+		this.domo=domoN;
+		this.combustible=combustibleN;
+		this.visitado=false;
+		
 	}
 	
 	/**
@@ -63,6 +73,45 @@ public class Nodo {
 		//Asinga el nuevo valor al objeto visitado
 		this.visitado = visitado;
 	}
+
+	public double getEjeX() {
+		return ejeX;
+	}
+
+	public void setEjeX(double ejeX) {
+		this.ejeX = ejeX;
+	}
+
+	public double getEjeY() {
+		return ejeY;
+	}
+
+	public void setEjeY(double ejeY) {
+		this.ejeY = ejeY;
+	}
+
+	public boolean getDomo() {
+		return domo;
+	}
+
+	public void setDomo(boolean domo) {
+		this.domo = domo;
+	}
+
+	public boolean getCombustible() {
+		return combustible;
+	}
+
+	public void setCombustible(boolean combustible) {
+		this.combustible = combustible;
+	}
+
+	public void setVisitado(boolean visitado) {
+		this.visitado = visitado;
+	}
+	
+	
+	
 	
 	
 }
