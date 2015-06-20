@@ -22,6 +22,7 @@ public class StartGame implements ActionListener{
 	private JFrame ventana;
 	private JButton btnPlayGame;
 	private JButton btnExit;
+	JButton btnHelp;
 	Servidor  aServidor = new Servidor();
 
 
@@ -60,6 +61,11 @@ public class StartGame implements ActionListener{
 		btnExit.addActionListener(this);
 		panel.add(btnExit);
 		
+		btnHelp = new JButton("Help");
+		btnHelp.setBounds(790, 80, 100, 50);
+		btnHelp.addActionListener(this);
+		panel.add(btnHelp);
+		
 		ventana.setVisible(true);
 	}
 	
@@ -71,8 +77,12 @@ public class StartGame implements ActionListener{
 
 			
 		}
-		if (e.getSource()==btnExit) {
+		else if (e.getSource()==btnExit) {
 			System.exit(0);
+			
+		}
+		else if (e.getSource()==btnHelp) {
+			System.out.println("Ayuda");
 			
 		}
 		

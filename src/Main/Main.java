@@ -1,10 +1,11 @@
 package Main;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import Grafos.Grafo;
 import Grafos.Nodo;
-import Menu.MenuPrincipal;
 import Menu.Principal;
 import Menu.Sonido;
 import Menu.StartGame;
@@ -18,10 +19,15 @@ public class Main {
     	//Servidor aServidor = new Servidor();
     	//aServidor.initServer(0); 
     	Principal menu =  new Principal();
-    	Sonido sonidito=new Sonido("sonidoFondo.wav",60);
+    	//Sonido sonidito=new Sonido("sonidoFondo.wav",60);
+    	File miDir = new File (".");
+    	try{
+    		System.out.println(miDir.getCanonicalPath());
+    	}catch(IOException e) {
+			e.printStackTrace();
+    	}
     	
-    	
-		System.out.println("Se crea el grafo\n");
+		/*System.out.println("Se crea el grafo\n");
 		Grafo gri=new Grafo(3);
 
 		System.out.println("Se insertan nodos en el grafo\n");
@@ -46,7 +52,7 @@ public class Main {
 		
 		
 		Nodo[] lista=gri.getListaNodos();
-		System.out.print(lista[1].getVisitado());
+		System.out.print(lista[1].getVisitado());*/
 		
 	
 
