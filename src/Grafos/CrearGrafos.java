@@ -167,35 +167,36 @@ public class CrearGrafos {
 			grafo=new Grafo(9);
 			
 			//inserta nodos al grafo con un nombre, posiciones, domo,combustible,inicio/final
-			grafo.insertarNodo("City0", 0, 0, false, false, false);
-			grafo.insertarNodo("City1", 0, 0, false, false, false);
-			grafo.insertarNodo("City2", 0, 0, false, false, false);
-			grafo.insertarNodo("City3", 0, 0, false, false, false);
-			grafo.insertarNodo("City4", 0, 0, false, false, false);
-			grafo.insertarNodo("City5", 0, 0, false, false, false);
-			grafo.insertarNodo("City6", 0, 0, false, false, false);
-			grafo.insertarNodo("City7", 0, 0, false, false, false);
-			grafo.insertarNodo("City8", 0, 0, false, false, true);
+			grafo.insertarNodo("City0", 13,500, false, false, false);
+			grafo.insertarNodo("City1", 63, 530, false, false, false);
+			grafo.insertarNodo("City2", 115, 500, false, false, false);
+			grafo.insertarNodo("City3", 130, 560, false, false, false);
+			grafo.insertarNodo("City4", 115, 625, false, false, false);
+			grafo.insertarNodo("City5", 63, 625, false, false, false);
+			grafo.insertarNodo("City6", 13, 625, false, false, false);
+			grafo.insertarNodo("City7", 0, 560, false, false, false);
+			grafo.insertarNodo("City8", 60, 560, false, false, true);
 			
 			//inserta aristas inicio,fin,posiciones, no dirijida
-			grafo.insertarArista(0, 1, 1, 0, 0, false);
-			grafo.insertarArista(1, 2, 1, 0, 0, false);
-			grafo.insertarArista(2, 3, 1, 0, 0, false);
-			grafo.insertarArista(3, 4, 1, 0, 0, false);
-			grafo.insertarArista(4, 5, 1, 0, 0, false);
-			grafo.insertarArista(5, 6, 1, 0, 0, false);
-			grafo.insertarArista(6, 7, 1, 0, 0, false);
-			grafo.insertarArista(7, 0, 1, 0, 0, false);
+			grafo.insertarArista(0, 1, 1, 36, 500, false);
+			grafo.insertarArista(1, 2, 1, 90, 500, false);
+			grafo.insertarArista(2, 3, 1, 120, 530, false);
+			grafo.insertarArista(3, 4, 1, 120, 590, false);
+			grafo.insertarArista(4, 5, 1, 90, 625, false);
+			grafo.insertarArista(5, 6, 1, 36, 625, false);
+			grafo.insertarArista(6, 7, 1, 5, 590, false);
+			grafo.insertarArista(7, 8, 1, 30, 560, true);
+			grafo.insertarArista(7, 0, 1, 5, 530, false);
 			
 			//inserta aristas inicio,fin,posiciones, dirijida
-			grafo.insertarArista(0, 8, 1, 0, 0, true);
-			grafo.insertarArista(1, 8, 1, 0, 0, true);
-			grafo.insertarArista(2, 8, 1, 0, 0, true);
-			grafo.insertarArista(3, 8, 1, 0, 0, true);
-			grafo.insertarArista(4, 8, 1, 0, 0, true);
-			grafo.insertarArista(5, 8, 1, 0, 0, true);
-			grafo.insertarArista(6, 8, 1, 0, 0, true);
-			grafo.insertarArista(7, 8, 1, 0, 0, true);
+			grafo.insertarArista(0, 8, 1, 35, 530, true);
+			grafo.insertarArista(1, 8, 1, 63, 530, true);
+			grafo.insertarArista(2, 8, 1, 93, 530, true);
+			grafo.insertarArista(3, 8, 1, 100, 560, true);
+			grafo.insertarArista(4, 8, 1, 93, 590, true);
+			grafo.insertarArista(5, 8, 1, 63, 625, true);
+			grafo.insertarArista(6, 8, 1, 35, 590, true);
+			
 			
 			//Obtiene las aristas y las guarda
 			Aristas=grafo.getListaAristas();
