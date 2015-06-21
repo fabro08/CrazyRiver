@@ -7,14 +7,16 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 
 import Interfaz.Game;
+import Utilities.LocalPath;
 
 public class Bridge {
 	private Game game;
+	private LocalPath local = new LocalPath();
 	public int life;
 	public boolean alive;
 	public int X;
 	public int Y;
-	private Image bridge= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img/Bridge.png").getImage();;
+	private Image bridge= new ImageIcon(local.getPath()+"Bridge.jpg").getImage();;
 	private final int WITH = 70;
 	private final int HEIGHT = 85;
 	private final int DIAMETER = 100;
@@ -25,7 +27,7 @@ public class Bridge {
 		this.game = game;
 		this.life = 0; //agregar vida aleatoria 
 		this.alive = true;
-		this.X = 400;
+		this.X = 180;
 		this.Y = 0;
 	}
 	public void move() {
@@ -48,7 +50,7 @@ public class Bridge {
 	
 	public void paint(Graphics2D g) 
 	{
-		g.drawImage(bridge, X, Y, WITH , HEIGHT, null);
+		g.drawImage(bridge, X, Y, WITH +500, HEIGHT+50, null);
 	}
 	
 	/**

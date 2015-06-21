@@ -1,14 +1,33 @@
 package Objetos;
+
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Rectangle;
+
+import javax.swing.ImageIcon;
+
+import Interfaz.Game;
+import Utilities.Aleatorio;
+import Utilities.LocalPath;
+
 /**
  * Clase ProBullets
  * @author arturo
  *
  */
 public class ProBulletsPackage {
+	private Game game;
+	private LocalPath local = new LocalPath();
+	public Aleatorio random = new Aleatorio();
+	public int life;
 	public boolean alive;
-	public int quantity;
-	public int posX;
-	public int posY;
+	public int X=random.getNewRandon(400, 640);
+	public int Y;
+	private Image pro= new ImageIcon(local.getPath()+"ProBulletsPag.png").getImage();;
+	private final int WITH = 70;
+	private final int HEIGHT = 85;
+	private final int DIAMETER = 100;
+	int ya = 2;
 	
 	/**
 	 Constructor de la clase
@@ -17,11 +36,33 @@ public class ProBulletsPackage {
 	 * @param posY - Parametro que indica la posicion en el eje Y en donde
 	 * debe de aparecer la bala
 	 */
-	public ProBulletsPackage(int posX, int posY){
+	public ProBulletsPackage(Game game){
+		this.game = game;
+		this.life = 2;
 		this.alive = true;
-		this.quantity = 20;
-		this.posX = posX;
-		this.posY = posY;		
+		this.X = 450;
+		this.Y = 20;	
+	}
+	public void move() {
+		
+		if(collision()){
+			game.nave1.setProbullets(20);
+			game.setPaqBalas(false);
+			
+		
+		}
+	    Y = Y + ya;
+	}
+	private boolean collision() {
+		return game.nave1.getBounds().intersects(getBounds());
+	}	
+	public Rectangle getBounds() {
+		return new Rectangle(X, Y, 40, 40);
+		}
+	
+	public void paint(Graphics2D g) 
+	{
+		g.drawImage(pro, X, Y, WITH , HEIGHT-25, null);
 	}
 	
 	/**
@@ -43,34 +84,28 @@ public class ProBulletsPackage {
 	/**
 	 * Metodo que cambia las coordenadas de la bala, generando el movimiento
 	 */
-	public void mover(){
-		
-	}
+	
 	
 	/******
 	 * Getters de la clase
 	 ******/
-	public int getQuantity() {
-		return quantity;
-	}
+
 	public int getPosX() {
-		return posX;
+		return X;
 	}
 	public int getPosY() {
-		return posY;
+		return Y;
 	}
 	
 	/******
 	 * Setters de la clase
 	 */
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
+	
 	public void setPosX(int posX) {
-		this.posX = posX;
+		this.X = posX;
 	}
 	public void setPosY(int posY) {
-		this.posY = posY;
+		this.Y = posY;
 	}
 
 	

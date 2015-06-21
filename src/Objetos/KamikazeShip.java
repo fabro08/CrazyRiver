@@ -8,14 +8,18 @@ import javax.sound.midi.VoiceStatus;
 import javax.swing.ImageIcon;
 
 import Interfaz.Game;
+import Utilities.Aleatorio;
+import Utilities.LocalPath;
 
 public class KamikazeShip {
 	private Game game;
+	public Aleatorio random = new Aleatorio();
+	private LocalPath local = new LocalPath();
 	public int life;
 	public boolean alive;
-	public int X;
+	public int X= random.getNewRandon(200, 640);
 	public int Y;
-	private Image Kami= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img/kami.png").getImage();;
+	private Image Kami= new ImageIcon(local.getPath()+"kami.png").getImage();;
 	private final int WITH = 70;
 	private final int HEIGHT = 85;
 	private final int DIAMETER = 100;
@@ -26,8 +30,7 @@ public class KamikazeShip {
 		this.game = game;
 		this.life = 2;
 		this.alive = true;
-		this.X = 450;
-		this.Y = 20;
+		this.Y = -65;
 	}
 	
 	public void move() {
@@ -36,8 +39,8 @@ public class KamikazeShip {
 			xa = -1;
 		if(collision()){
 			game.nave1.removesLife(50);
+			kill();
 			game.setEnemis(false);
-			
 		}
 	    Y = Y + ya;
 	}
@@ -45,13 +48,14 @@ public class KamikazeShip {
 	private boolean collision() {
 		return game.nave1.getBounds().intersects(getBounds());
 	}	
+	
 	public Rectangle getBounds() {
 		return new Rectangle(X, Y, 40, 40);
 	}
 	
 	public void paint(Graphics2D g) 
 	{
-		g.drawImage(Kami, X, Y, WITH , HEIGHT, null);
+		g.drawImage(Kami,X, Y, WITH , HEIGHT, null);
 	}
 	
 	public void removesLife(){

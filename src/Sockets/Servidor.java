@@ -10,15 +10,15 @@ import org.omg.CORBA.PUBLIC_MEMBER;
 import Interfaz.Game;
 
 /**
- * 
+ * Clase para crear el servidor, para así manejar el socket con el celular
  *
  * 
- * @author Jorge V
+ * @author Fabricio 
  */
 
 public class Servidor {
 
-	int puerto = 5009;
+	int puerto = 5009; //puerto a utilizar
 
 	ServerSocket Conexion;
 
@@ -28,34 +28,43 @@ public class Servidor {
 
 	String MensajeCliente;
 
-	int x = 0;
+	int x = 0; //Posición inicial en X
+	int arma =1;
 	private boolean shoot=false;
 	
-
+	/*
+	 * Se crea una ventana y se llama 
+	 */
 	JFrame frame = new JFrame();
-	// SERVIDOR
 	Game game = new Game();
 
 	public void initServer(int choose) {
+		/**
+		 * Si la opción de menú es el teclado
+		 */
 		if (choose==0){
 
-			
+			//Se pinta la pantalla
 			frame.add(game);
 			frame.setSize(900,700);
 			frame.setVisible(true);
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			while (true) {
-				game.move(0,2,false);
+				game.move(0,2,false,0);
 				game.repaint();
 				try {
-					Thread.sleep(1);
+					Thread.sleep(15);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		}
+		/*
+		 * Sino se crea el socket para jugar por el celular
+		 */
 		else{
+			
 			
 			
 		BufferedReader entrada;
@@ -93,6 +102,19 @@ public class Servidor {
 					 shoot = true;
 				 }
 					
+				 else if(MensajeCliente.equals("arma1")){
+					 arma = 1;
+				 }
+				 else if(MensajeCliente.equals("arma2")){
+					 arma = 2;
+				 }
+				 else if(MensajeCliente.equals("arma3")){
+					 arma = 3;
+				 }
+				 else if(MensajeCliente.equals("arma4")){
+					 arma = 4;
+				 }
+				 
 			
 
 				 else {
@@ -106,11 +128,11 @@ public class Servidor {
 					frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 					while (pos != x) {
 						x = pos;
-
-						game.move(x, 1,shoot);
+						
+						game.move(x, 1,shoot,arma);
 						game.repaint();
 												try {
-							Thread.sleep(1);
+							Thread.sleep(15);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -127,7 +149,7 @@ public class Servidor {
 
 		} catch (Exception e){
 
-			System.out.println("Se ha producido el siguiente error: "+ e.getMessage());
+			System.out.println("Error: "+ e.getMessage());
 
 		}
 		

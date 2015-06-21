@@ -7,6 +7,8 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 
 import Interfaz.Game;
+import Utilities.Aleatorio;
+import Utilities.LocalPath;
 
 /**
  * Clase BasicBullets
@@ -14,22 +16,27 @@ import Interfaz.Game;
  *
  */
 public class BasicBullets {
+	private LocalPath local = new LocalPath();
 	public boolean alive;
 	public int x;
 	public int y;
 	int xa = 1;
 	int ya = 1;
-	private Image Bala= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img//bala.png").getImage();;
+	private Image Bala= new ImageIcon(local.getPath()+"bala.png").getImage();;
 	private Game game;
 	private final int WITH = 70;
 	private final int HEIGHT = 85;
 	private final int DIAMETER = 30;
+	public Aleatorio RBvida = new Aleatorio();
 
 	/**
 	 Constructor de la clase
 	 * @param posX - Parametro que indica la posicion en el eje X en donde
 	 * debe de aparecer la bala
+	 * @return 
 	 */
+
+	
 	public BasicBullets(Game game, int x, int y){
 		this.game = game;
 		this.alive = true;
@@ -41,30 +48,49 @@ public class BasicBullets {
 	 * Metodo que cambia las coordenadas de la bala, generando el movimiento
 	 */
 	public void move() {
-		if (y - ya < 0)
-			ya = 1;		
-		if(collision()){
+	
+		if(collision1()){
+		
 			game.setEnemis(false);
-			game.setPuente(false);
 		}
-		//x = x - xa;
-		y = y - 5;
+		else if(collision2()){
+			
+			game.jefe.setLife(1);
+
+		}
+		else if(collision3()){
+			game.setVida(false);
+			game.vida.setPosY(-65);
+		}
+		else if(collision4()){
+			
+			game.setfuel(false);	
+		}
+	else if(collision5()){		
+			game.setPuente(false);	
+		}
+		y = y - 3;
 	}
 	
-	private boolean collision() {
-		/*if (game.getKamyEnemy()){
-			return game.kamik.getBounds().intersects(getBounds());}
-		else if (game.getBridge()){
-			return game.puente.getBounds().intersects(getBounds());}*/
-		//return alive;
-		//return game.puente.getBounds().intersects(getBounds());
-		return game.puente.getBounds().intersects(getBounds());
-		
+	private boolean collision1() {//colicion con el kamik
+		return game.kamik.getBounds().intersects(getBounds());	
+		}
+	private boolean collision2() {//colicion con el boss
+		return game.jefe.getBounds().intersects(getBounds());	
+		}
+	private boolean collision3() {//colicion con la vida
+		return game.vida.getBounds().intersects(getBounds());	
+		}
+	private boolean collision4() {//colicion con la vida
+		return game.combustible.getBounds().intersects(getBounds());	
+		}
+	private boolean collision5() {//colicion con el puente
+		return game.puente.getBounds().intersects(getBounds());	
 		}
 		
 	
 	public Rectangle getBounds() {
-		return new Rectangle(x, y, 10, 10);
+		return new Rectangle(x, y,30, 30);
 	}
 	
 	public void paint(Graphics2D g) 
@@ -88,7 +114,7 @@ public class BasicBullets {
 	 * de la pantalla
 	 */
 	public void disappears(){
-		alive = false;
+		alive = true;
 	}
 
 
