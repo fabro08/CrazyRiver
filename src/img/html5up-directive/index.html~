@@ -55,7 +55,11 @@
 						</div>
 					</section>
 					<section class="feature left">
+<<<<<<< HEAD
 						<a href="https://mega.nz/#!CE0RlR7Y!yMwJJTJM5Xaoa6dvIyPFzK-cQ1nCHxoPwKvOygF4x1k" class="image icon fa-download"><img src="images/pic03.jpg" alt="" /></a>
+=======
+						<a href="https://mega.nz/" class="image icon fa-download"><img src="images/pic03.jpg" alt="" /></a>
+>>>>>>> origin/master
 						<div class="content">
 							<h3>Download</h3>
 							<p>If you want to play you have to download the application design for android.</p>
@@ -116,7 +120,11 @@
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+<<<<<<< HEAD
 						<li><a href="https://github.com/fabro08/CrazyRiver" class="icon fa-github"><span class="label">Github</span></a></li>
+=======
+						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+>>>>>>> origin/master
 						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
 					</ul>
 
@@ -135,4 +143,8 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> origin/master
