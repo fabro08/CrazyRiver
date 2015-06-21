@@ -47,99 +47,123 @@ public class Arista {
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Clase getInicio
+	 * Clase tipo Entero
+	 * @return inicio(Entero)
 	 */
 	public int getInicio() {
+		//Devuelve el valor del objeto inicio
 		return inicio;
 	}
 	
 	/**
-	 * 
-	 * @param inicio
+	 *  Clase setInicio
+	 *  Clase tipo Void
+	 * @param inicio(Entero)
 	 */
 	public void setInicio(int inicio) {
+		//Asigna un nuevo valor al objeto inicio
 		this.inicio = inicio;
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Clase getFin
+	 * Clase tipo Entero
+	 * @return fin (Entero)
 	 */
 	public int getFin() {
+		//Devuelve el valor del objeto fin
 		return fin;
 	}
 
 	/**
-	 * 
-	 * @param fin
+	 * Clase setFin
+	 * Clase tipo Void
+	 * @param fin (Entero)
 	 */
 	public void setFin(int fin) {
+		//Asigna un nuevo valor al objeto fin
 		this.fin = fin;
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Clase getEjeX
+	 * Clase tipo Double
+	 * @return ejeX (Double)
 	 */
 	public double getEjeX() {
+		//Devuelve el valor del objeto ejeX
 		return ejeX;
 	}
 
 	/**
-	 * 
-	 * @param ejeX
+	 * Clase setEjeX
+	 * Clase tipo Void
+	 * @param ejeX (Double)
 	 */
 	public void setEjeX(double ejeX) {
+		//Asigna un nuevo valor al objeto ejeX
 		this.ejeX = ejeX;
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Clase getEjeY
+	 * Clase tipo Double
+	 * @return ejeY (Double)
 	 */
 	public double getEjeY() {
+		//Devuelve el valor del objeto ejeY
 		return ejeY;
 	}
 
 	/**
-	 * 
-	 * @param ejeY
+	 * Clase setEjeY
+	 * Clase tipo Void
+	 * @param ejeY (Double)
 	 */
 	public void setEjeY(double ejeY) {
+		//Asigna un nuevo valor al objeto ejeY
 		this.ejeY = ejeY;
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Clase getPeso
+	 * Clase tipo Entero
+	 * @return peso (Entero)
 	 */
 	public int getPeso() {
+		//Devuelve el valor del objeto peso
 		return peso;
 	}
 
 	/**
-	 * 
-	 * @param peso
+	 * Clase setPeso
+	 * Clase tipo Void
+	 * @param peso (Entero)
 	 */
 	public void setPeso(int peso) {
+		//Asigna un nuevo valor al objeto peso
 		this.peso = peso;
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Clase getDirijida
+	 * Clase tipo Boolean
+	 * @return dirijida (Boolean)
 	 */
-	public boolean isDirigida() {
+	public boolean getDirigida() {
+		//Devuelve el valor del objeto dirijida
 		return dirijida;
 	}
 
 	/**
-	 * 
-	 * @param dirigida
+	 * Clase setDirijida
+	 * Clase tipo Void
+	 * @param dirijida (Boolean)
 	 */
-	public void setDirigida(boolean dirigida) {
-		this.dirijida = dirigida;
+	public void setDirijida(boolean dirijida) {
+		//Asigna un nuevo valor al objeto dirijida
+		this.dirijida = dirijida;
 	}
 	
 }

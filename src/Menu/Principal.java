@@ -12,11 +12,14 @@ import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 
+import Utilities.Fondos;
+
 public class Principal implements ActionListener  {
 
 	private JFrame ventana;
 	private JButton btnStart ;
 	private JButton btnExit;
+	
 
 	/**
 	 * Create the application.
@@ -38,7 +41,7 @@ public class Principal implements ActionListener  {
 		ventana.getContentPane().setLayout(null);
 		
 		
-		JPanel panel = new Fondos("fondo.jpg");
+		JPanel panel = new Fondos("fondoPrincipal.jpg");
 		panel.setBounds(0, 0, 898, 670);
 		ventana.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -64,7 +67,7 @@ public class Principal implements ActionListener  {
 		panel.add(lblLoQueSe);
 		
 		btnExit = new JButton("");
-		btnExit.setIcon(new ImageIcon(Principal.class.getResource("/Menu/salir.png")));
+		btnExit.setIcon(new ImageIcon(Principal.class.getResource("/img/salir.png")));
 		btnExit.setBounds(810, 590, 50, 50);
 		btnExit.addActionListener(this);
 		panel.add(btnExit);

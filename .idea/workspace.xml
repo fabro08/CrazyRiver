@@ -1,24 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c3d3719-2b3d-42b1-b111-b9ee79bafb47" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Menu/MenuPrincipal.java" afterPath="" />
+    <list default="true" id="8c3d3719-2b3d-42b1-b111-b9ee79bafb47" name="Default" comment="menu">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fondo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/monedas.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/img/s.jpg" afterPath="$PROJECT_DIR$/src/img/s.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/BasicBullets.java" afterPath="$PROJECT_DIR$/src/Objetos/BasicBullets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/BasicEnemyShip.java" afterPath="$PROJECT_DIR$/src/Objetos/BasicEnemyShip.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/Boss.java" afterPath="$PROJECT_DIR$/src/Objetos/Boss.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/Bridge.java" afterPath="$PROJECT_DIR$/src/Objetos/Bridge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utilities/Clock.java" afterPath="$PROJECT_DIR$/src/Utilities/Clock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/DiffusionBullets.java" afterPath="$PROJECT_DIR$/src/Objetos/DiffusionBullets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/DiffusionBulletsPackage.java" afterPath="$PROJECT_DIR$/src/Objetos/DiffusionBulletsPackage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/FuelPackage.java" afterPath="$PROJECT_DIR$/src/Objetos/FuelPackage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaz/Game.java" afterPath="$PROJECT_DIR$/src/Interfaz/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/KamikazeShip.java" afterPath="$PROJECT_DIR$/src/Objetos/KamikazeShip.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/LifePackage.java" afterPath="$PROJECT_DIR$/src/Objetos/LifePackage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Main.java" afterPath="$PROJECT_DIR$/src/Main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Menu/StartGame.java" afterPath="$PROJECT_DIR$/src/Menu/StartGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/MayhemBullets.java" afterPath="$PROJECT_DIR$/src/Objetos/MayhemBullets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/PlayerShip.java" afterPath="$PROJECT_DIR$/src/Objetos/PlayerShip.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/ProBullets.java" afterPath="$PROJECT_DIR$/src/Objetos/ProBullets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Objetos/ProBulletsPackage.java" afterPath="$PROJECT_DIR$/src/Objetos/ProBulletsPackage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sockets/Servidor.java" afterPath="$PROJECT_DIR$/src/Sockets/Servidor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ec2a1718-979b-46e6-9ae3-097604ad78f7" name="Rejected commit: Default" comment="interfaz menu completo con sonido de fondo" />
     <list id="49d72b94-e7f3-4462-bc63-53e6bdba9dee" name="Rejected commit: Default (2)" comment="docu java">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Diagrama de  Clases.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Diagrama de  Clases.ucls" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Grafos/Diagrama de Clases.ucls" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafos/Grafo.java" afterPath="$PROJECT_DIR$/src/Grafos/Grafo.java" />
+    </list>
+    <list id="57e701e1-95f2-4dc7-bab2-42dc10db8bb9" name="Rejected commit: Default (3)" comment="grafos">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafos/Arista.java" afterPath="$PROJECT_DIR$/src/Grafos/Arista.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafos/CaminoCorto.java" afterPath="$PROJECT_DIR$/src/Grafos/CaminoCorto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafos/Nodo.java" afterPath="$PROJECT_DIR$/src/Grafos/Nodo.java" />
+    </list>
+    <list id="5cb5d2cf-ddde-4b5a-9b6b-e966f89ed1b6" name="Rejected commit: Default (4)" comment="menu">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Menu/PlayesGame.java" afterPath="$PROJECT_DIR$/src/Menu/PlayesGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Menu/Principal.java" afterPath="$PROJECT_DIR$/src/Menu/Principal.java" />
     </list>
     <ignored path="CrazyRiver.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <file path="$PROJECT_DIR$/src/Grafos/Grafo.java" ignored="false" />
+    <file path="$PROJECT_DIR$/src/Grafos/Nodo.java" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/Grafos/Grafo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="108" column="7" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
+              <caret line="115" column="7" selection-start-line="115" selection-start-column="7" selection-end-line="115" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -49,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.4">
-              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -59,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/src/Interfaz/Game.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -69,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/src/Grafos/Nodo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+              <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -78,6 +102,11 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Steven" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -136,9 +165,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,6 +347,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -572,7 +601,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434765557744</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Menu">
+      <created>1434768034484</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1434768034484</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -594,7 +629,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329429" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -627,13 +662,80 @@
     <MESSAGE value="sockets" />
     <MESSAGE value="docu java" />
     <MESSAGE value="Clase Arista grafo actualizado y nodo actializado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clase Arista grafo actualizado y nodo actializado" />
+    <MESSAGE value="Menu" />
+    <MESSAGE value="grafos" />
+    <MESSAGE value="menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Grafos/Grafo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interfaz/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grafos/Nodo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grafos/Grafo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="7" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interfaz/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grafos/Nodo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Grafos/Grafo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -926,7 +1028,7 @@
     <entry file="file://$PROJECT_DIR$/src/Grafos/Nodo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -934,7 +1036,7 @@
     <entry file="file://$PROJECT_DIR$/src/Interfaz/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -942,7 +1044,7 @@
     <entry file="file://$PROJECT_DIR$/src/Grafos/Grafo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="7" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
+          <caret line="115" column="7" selection-start-line="115" selection-start-column="7" selection-end-line="115" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -950,7 +1052,7 @@
     <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding />
         </state>
       </provider>

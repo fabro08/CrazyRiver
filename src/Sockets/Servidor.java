@@ -29,6 +29,7 @@ public class Servidor {
 	String MensajeCliente;
 
 	int x = 0;
+	int arma =1;
 	private boolean shoot=false;
 	
 
@@ -45,10 +46,10 @@ public class Servidor {
 			frame.setVisible(true);
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			while (true) {
-				game.move(0,2,false);
+				game.move(0,2,false,0);
 				game.repaint();
 				try {
-					Thread.sleep(1);
+					Thread.sleep(15);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -93,6 +94,19 @@ public class Servidor {
 					 shoot = true;
 				 }
 					
+				 else if(MensajeCliente.equals("arma1")){
+					 arma = 1;
+				 }
+				 else if(MensajeCliente.equals("arma2")){
+					 arma = 2;
+				 }
+				 else if(MensajeCliente.equals("arma3")){
+					 arma = 3;
+				 }
+				 else if(MensajeCliente.equals("arma4")){
+					 arma = 4;
+				 }
+				 
 			
 
 				 else {
@@ -106,11 +120,11 @@ public class Servidor {
 					frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 					while (pos != x) {
 						x = pos;
-
-						game.move(x, 1,shoot);
+						
+						game.move(x, 1,shoot,arma);
 						game.repaint();
 												try {
-							Thread.sleep(1);
+							Thread.sleep(15);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();

@@ -22,7 +22,7 @@ public class Nodo {
 	public boolean combustible;
 	//Objeto de tipo Boolean llamado visitado (visita del nodo)
 	public boolean visitado;
-	
+	//Objeto de tipo Boolean llamado nodoFinal (tipo de nodo)
 	public boolean nodoFinal;
 	
 	/**
@@ -47,7 +47,7 @@ public class Nodo {
 		this.combustible=combustibleN;
 		//Se le asigna a objeto visitado el valor de visitadoN(visita)
 		this.visitado=false;
-		
+		//Se le asigna a objeto nodoFinal el valor de nodoFinalN(tipo nodo)
 		this.nodoFinal=nodoFinalN;
 		
 	}
@@ -171,5 +171,27 @@ public class Nodo {
 		//Asigna el nuevo valor al objeto combustible
 		this.combustible = combustible;
 	}
+
+	/**
+	 * Clase getNodoFinal
+	 * Clase de tipo Boolean
+	 * @return nodoFinal(tipo Boolean)
+	 */
+	public boolean getNodoFinal() {
+		//Devuelve el valor del objeto nodoFinal
+		return nodoFinal;
+	}
+
+	/**
+	 * Clase setNodoFinal
+	 * Clase de tipo Void
+	 * @param nodoFinal (tipo Boolean)
+	 */
+	public void setNodoFinal(boolean nodoFinal) {
+		//Asigna el nuevo valor al objeto nodoFinal
+		this.nodoFinal = nodoFinal;
+	}
+	
+	
 }
 //Fin clase Nodo

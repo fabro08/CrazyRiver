@@ -1,11 +1,14 @@
 package Objetos;
 
+import Utilities.LocalPath;
+
 /**
  * Clase DiffusionBullets
  * @author arturo
  *
  */
 public class DiffusionBulletsPackage {
+	private LocalPath local = new LocalPath();
 	public boolean alive;
 	public int quantity;
 	public int posX;

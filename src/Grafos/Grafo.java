@@ -202,8 +202,5 @@ public class Grafo {
 		//Devuelve el valor del objeto listaAristas
 		return listaAristas;
 	}
-	
-	
-    
 }
 //Fin clase Grafo

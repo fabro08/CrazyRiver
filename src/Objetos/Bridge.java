@@ -7,14 +7,16 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 
 import Interfaz.Game;
+import Utilities.LocalPath;
 
 public class Bridge {
 	private Game game;
+	private LocalPath local = new LocalPath();
 	public int life;
 	public boolean alive;
 	public int X;
 	public int Y;
-	private Image bridge= new ImageIcon("/media/Respaldo/Java/CrazyRiver/src/img/Bridge.png").getImage();;
+	private Image bridge= new ImageIcon(local.getPath()+"Bridge.png").getImage();;
 	private final int WITH = 70;
 	private final int HEIGHT = 85;
 	private final int DIAMETER = 100;

@@ -1,5 +1,13 @@
 package Objetos;
 
+import java.awt.Graphics2D;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+
+import Interfaz.Game;
+import Utilities.LocalPath;
+
 /**
  * Clase MayhemBullets
  * @author arturo
@@ -7,18 +15,24 @@ package Objetos;
  */
 public class MayhemBullets {
 	public boolean alive;
-	public int posX;
-	public int posY;
+	public int x;
+	public int y;
+	private LocalPath local = new LocalPath();
+	private Image BalaMayhem= new ImageIcon(local.getPath()+"Mayhem.png").getImage();;
+	private Game game;
+	private final int WITH = 70;
+	private final int HEIGHT = 85;
+	private final int DIAMETER = 30;
 
 	/**
 	 Constructor de la clase
 	 * @param posX - Parametro que indica la posicion en el eje X en donde
 	 * debe de aparecer la bala
 	 */
-	public MayhemBullets(int posX, int posY){
-		this.alive = true;
-		this.posX = posX;
-		this.posY = posY;
+	public MayhemBullets(Game game, int posX, int posY){
+		this.game = game;
+		this.x = posX;
+		this.y = posY;
 	}
 
 	/**
@@ -27,6 +41,10 @@ public class MayhemBullets {
 	 */
 	public boolean itsAlive() {
 		return alive;
+	}
+	public void paint(Graphics2D g) 
+	{
+		g.drawImage(BalaMayhem, x, y, WITH , HEIGHT, null);
 	}
 
 	/**
@@ -41,6 +59,8 @@ public class MayhemBullets {
 	 * Metodo que cambia las coordenadas de la bala, generando el movimiento
 	 */
 	public void move(){
+		y = y - 3;
+		
 
 	}
 
@@ -48,19 +68,19 @@ public class MayhemBullets {
 	 * Getters de la clase
 	 ******/
 	public int getPosX() {
-		return posX;
+		return x;
 	}
 	public int getPosY() {
-		return posY;
+		return y;
 	}
 
 	/******
 	 * Setters de la clase
 	 ******/
 	public void setPosX(int posX) {
-		this.posX = posX;
+		this.x = posX;
 	}
 	public void setPosY(int posY) {
-		this.posY = posY;
+		this.y = posY;
 	}
 }
